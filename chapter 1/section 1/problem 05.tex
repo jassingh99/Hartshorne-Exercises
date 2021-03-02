@@ -1,0 +1,9 @@
+\label{1.1.5}
+
+Show that a $k$-algebra $B$ is isomorphic to the affine coordinate ring of some algebraic set in $\A^n$, for some $n$, if and only if $B$ is a finitely generated $k$-algebra with no nilpotent elements.
+
+\begin{proof}
+    For $Y \subseteq \A^n$ closed, we know that $I(Y)$ is radical. Hence, $A(Y) = k[x_1, \dots, x_n]/I(Y)$ is reduced finitely generated $k$-algebra.
+    
+    On the other hand, let $B$ be some reduced finitely generated $k$-algebra. Then we can write $B \cong k[x_1, \dots, x_n]/I$. As $B$ is reduced, $I$ is radical, so by the Nullstellensatz we have $I(Z(I)) = \sqrt{I} = I$. Hence, $A(Z(I)) = k[x_1, \dots, x_n]/I \cong B$.
+\end{proof}

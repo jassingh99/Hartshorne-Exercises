@@ -1,0 +1,23 @@
+\label{1.2.4}
+
+\begin{enumerate}[label = (\alph*)]
+    \item There is a $1-1$ inclusion-reversing correspondence between algebraic sets in $\P^n$, and homogeneous radical ideals of $S$ not equal to $S_+$, given by $Y \mapsto I(Y)$ and $\a \mapsto Z( \a)$. \textit{Note}: Since $S_+$ does not occur in this correspondence, it is sometimes called the \textit{irrelevant} maximal ideal of $S$.
+    
+    \item An algebraic set $Y \subseteq \P^n$ is irreducible if and only if $I(Y)$ is a prime ideal.
+    
+    \item Show that $\P^n$ itself is irreducible.
+\end{enumerate}
+
+\begin{proof}
+	\begin{enumerate}[label=(\alph*)]
+		\item $Z(\a)$ is, by definition, always algebraic. Furthermore, it's easy to see that $I(Y)$ is always radical and homogeneous. We must show then that $I(Y)$ can never equal $S_+$ for $Y$ algebraic. Indeed, if it was the case that $I(Z(\a)))=S_+$then $x_i \in I(Z(\a))$ for all $i$. Thus, each $x_i$ sends all of $Z(\a)$ to $0$. But $\bigcap Z(x_i) = \emptyset$ so $Z(\a)=\emptyset$. However, $I(\emptyset)=S\neq S_+$.
+
+		That $I$ and $Z$ are inverses on these restricted domains follows from parts (d) and (e) of problem \ref{1.2.3}.
+
+		\item Let $I(Y)$ be prime. Then let $Y \subseteq Z(I_1) \cup Z(I_2)$. Hence, $I(Y) \supseteq I(Z(I_1) \cup Z(I_2))$. By \ref{1.2.3} part (c), this is $I(Z(I_1))\cap I(Z(I_2)) = \sqrt I_2 \cap \sqrt I_2 \supseteq I_1 I_2$. Hence, $I(Y) \supseteq I_1 I_2$. It is then a general fact of commutative algebra that some $I_j \subseteq I(Y)$. Indeed, if neither is contained in $I(Y)$ then let $a_j \in I_j - I(Y)$. $a_1 a_2 \in I_1 I_2$ but cannot be in $I(Y)$ as it is prime, a contradiction.
+	
+		On the other hand, let $Y$ be irreducible. Let $f, g$ be homogeneous such that $fg \in I(Y)^h$. Then $Y \subseteq Z(fg) \subseteq Z(f) \cup Z(g)$. Then as $Y$ is irreducible, it is contained in one of these, WLOG say $Y \subseteq Z(f)$. Hence, $f \in I(Y)$. As $I(Y)$ is homogeneous, this proves its primality.
+
+		\item $\P^n = I(0)$.
+	\end{enumerate}
+\end{proof}

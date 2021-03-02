@@ -1,0 +1,32 @@
+\label{1.1.7}
+
+\begin{enumerate}[label = (\alph*)]
+    \item Show that the following conditions are equivalent for a topological space X:
+    \begin{enumerate}[label = (\roman*)]
+        \item X is noetherian;
+        
+        \item every nonempty family of closed subsets has a minimal element;
+        
+        \item X satisfies the ascending chain condition for open subsets;
+        
+        \item every nonempty family of open subsets has a maximal element.
+    \end{enumerate}
+    
+    \item A noetherian topological space is \textit{quasi-compact}, i.e., every open cover has a finite subcover.
+    
+    \item Any subset of a noetherian topological space is noetherian in its induced topology.
+    
+    \item A noetherian space which is also Hausdorff must be a finite set with the discrete topology.
+\end{enumerate}
+
+\begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item The equivalence of (i) and (ii) is the same argument from algebra. (i) is equivalent to (iii) and (ii) is equivalent to (iv) via taking complements, which reverses order.
+        
+        \item Let $X = \bigcup \mathcal U$ and let $S = \curly{\bigcup \mathcal V \mid \mathcal V \subseteq \mathcal U \text{ finite}}$. Then by (a), $S$ has a maximal element $U_1 \cup \dots \cup U_n$. If there is an $x \in X - (U_1 \cup \dots \cup U_n)$ then let $x \in U_{n + 1}$ open. Then $U_1 \cup \dots \cup U_n \subsetneq U_1 \cup \dots \cup U_{n + 1}$ a contradiction. Then $X = U_1 \cup \dots \cup U_n$ and $X$ is compact.
+        
+        \item Let $A \subseteq X$. Let $A_1 \supseteq A_2 \supseteq \dots$ be a decreasing chain of closed sets in $A$. Then $A_i = \overline{A_i} \cap A$ and $\overline{A_1} \supseteq \overline{A_2} \supseteq \dots$ is a decreasing chain in $X$, which is noetherian. The chain upstairs terminates so the chain downstairs does as well.
+        
+        \item Let $X$ be noetherian and Hausdorff. Let $A$ be an irreducible closed subset of $X$. Let $x, y \in A$ and $x \in U, y \in V$ open neighborhoods in $A$. $U \cap V \neq \emptyset$ by irreducibility, so $x = y$ by Hausdorffness. Thus, the irreducible components of $X$ are singletons and $X$ is finite. Finite Hausdorff spaces are discrete.
+    \end{enumerate}
+\end{proof}

@@ -1,0 +1,173 @@
+
+\documentclass[12pt]{article}
+ 
+\usepackage[margin=1in]{geometry}
+\usepackage[new]{old-arrows}
+\usepackage{amsmath,enumitem,amsthm,amssymb,graphicx,mathtools,tikz,hyperref,yfonts,tikz-cd, subfiles, datetime, adjustbox, extarrows,old-arrows}
+\usepackage[nottoc]{tocbibind}
+
+\usepackage[backend=biber,style=alphabetic,sorting=ynt]{biblatex}
+\addbibresource{bob.bib}
+\DeclareFieldFormat{postnote}{#1}
+\DeclareFieldFormat{multipostnote}{#1}
+
+\usetikzlibrary{positioning,lindenmayersystems}
+
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
+\usepackage[rightcaption]{sidecap}
+\usepackage{wrapfig}
+
+\newdateformat{monthdayyeardate}{%
+\monthname[\THEMONTH] \THEDAY, \THEYEAR}
+
+\pagestyle{headings}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks  = true,
+    linkcolor   = blue,
+    filecolor   = magenta,      
+    urlcolor    = cyan,
+}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{definition}
+\newtheorem*{example}{Example}
+
+\theoremstyle{definition}
+\newtheorem*{examples}{Examples}
+
+\theoremstyle{definition}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{definition}
+\newtheorem*{remarks}{Remarks}
+
+\theoremstyle{definition}
+\newtheorem*{conventions}{Conventions}
+
+\DeclareMathOperator{\spec}{Spec}
+\DeclareMathOperator{\Frac}{Frac}
+\DeclareMathOperator{\nil}{nil}
+\DeclareMathOperator{\rad}{rad}
+\DeclareMathOperator{\ann}{Ann}
+\DeclareMathOperator{\cok}{cok}
+\DeclareMathOperator{\im}{im}
+\DeclareMathOperator{\Hom}{Hom}
+\DeclareMathOperator{\id}{id}
+\DeclareMathOperator{\tor}{Tor}
+\DeclareMathOperator{\ext}{Ext}
+\DeclareMathOperator{\codim}{codim}
+\DeclareMathOperator{\trdeg}{tr deg}
+\DeclareMathOperator{\tot}{Tot}
+\DeclareMathOperator{\qf}{qf}
+\DeclareMathOperator{\mor}{Mor}
+\DeclareMathOperator*{\colim}{colim}
+\newcommand{\R}{\mathbb R}
+\newcommand{\C}{\mathbb C}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Q}{\mathbb Q}
+\renewcommand{\P}{\mathbb P}
+\newcommand{\A}{\mathbb A}
+\newcommand{\F}{\mathbb F}
+\newcommand{\p}{\mathfrak p}
+\newcommand{\q}{\mathfrak q}
+\newcommand{\m}{\mathfrak m}
+\renewcommand{\a}{\mathfrak a}
+\renewcommand{\b}{\mathfrak b}
+\newcommand{\rp}{\R\P}
+\newcommand{\cp}{\C\P}
+\newcommand{\transverse}{\mathrel{\text{\tpitchfork}}}
+\makeatletter
+\newcommand{\tpitchfork}{%
+  \vbox{
+    \baselineskip\z@skip
+    \lineskip-.52ex
+    \lineskiplimit\maxdimen
+    \m@th
+    \ialign{##\crcr\hidewidth\smash{$-$}\hidewidth\crcr$\pitchfork$\crcr}
+  }%
+}
+\makeatother
+\newcommand{\diff}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\parens}[1]{{\left(#1\right)}}
+\newcommand{\bracket}[1]{{\left[#1\right]}}
+\newcommand{\curly}[1]{{\left\{#1\right\}}}
+\newcommand{\Angle}[1]{{\left\langle#1\right\rangle}}
+\newcommand{\pipe}[1]{{\left|#1\right|}}
+
+\newcommand{\harpoon}{\overset{\rightharpoonup}}
+
+\renewcommand{\thesection}{\Roman{section}} 
+
+\title{Hartshorne Exercises}
+\author{Jas Singh}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+\newpage
+
+\section{Varieties}
+    \begin{conventions}
+        $k$ is an algebraically closed field.
+    \end{conventions}
+    
+     \subsection{Affine Varieties}
+         \begin{conventions}
+             $A = k[x_1, \dots, x_n]$.
+         \end{conventions}
+ 
+ 	     \subsubsection{INCOMPLETE} \subfile{./chapter 1/section 1/problem 01}
+         \subsubsection{} \subfile{./chapter 1/section 1/problem 02}
+         \subsubsection{} \subfile{./chapter 1/section 1/problem 03}
+         \subsubsection{} \subfile{./chapter 1/section 1/problem 04}
+         \subsubsection{} \subfile{./chapter 1/section 1/problem 05}
+         \subsubsection{} \subfile{./chapter 1/section 1/problem 06}
+         \subsubsection{} \subfile{./chapter 1/section 1/problem 07}
+         \subsubsection{} \subfile{./chapter 1/section 1/problem 08}
+         \subsubsection{} \subfile{./chapter 1/section 1/problem 09}
+         \subsubsection{} \subfile{./chapter 1/section 1/problem 10}
+         \subsubsection{} \subfile{./chapter 1/section 1/problem 11}
+         \subsubsection{} \subfile{./chapter 1/section 1/problem 12}
+      \newpage
+    
+    \subsection{Projective Varieties}
+        \begin{conventions}
+            $S = k[x_0, \dots, x_n]$.
+        \end{conventions}
+        
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 01}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 02}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 03}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 04}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 05}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 06}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 07}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 08}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 09}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 10}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 11}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 12}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 13}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 14}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 15}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 16}
+        \subsubsection{} \subfile{./chapter 1/section 2/problem 17}
+
+\newpage
+
+\printbibliography
+
+\end{document}

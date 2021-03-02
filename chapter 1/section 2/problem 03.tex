@@ -1,0 +1,27 @@
+\label{1.2.3}
+
+\begin{enumerate}[label = (\alph*)]
+    \item If $T_1 \subseteq T_2$ are subsets of $S^h$, then $Z(T_1) \supseteq Z(T_2)$.
+    
+    \item If $Y_1 \subseteq Y_2$ are subsets of $\P^n$, then $I(Y_1) \supseteq I(Y_2)$.
+    
+	\item For any two subsets $Y_1, Y_2$ of $\P^n$, $I(Y_1 \cup Y_2) = I(Y_1) \cap I(Y_2)$.
+    
+    \item If $\a \subseteq S$ is a homogeneous ideal with $Z(\a) \neq \emptyset$, then $I(Z(\a)) = \sqrt{\a}$.
+    
+    \item For any subset $Y \subseteq \P^n$, $Z(I(Y)) = \overline{Y}$.
+\end{enumerate}
+
+\begin{proof}
+	\begin{enumerate}[label=(\alph*)]
+		\item Let $P \in Z(T_2)$ and $f \in T_1 \subseteq T_2$. Then $f(P)=0$ so $P \in Z(T_1)$.
+
+		\item Let $f \in I(Y_2)$ and $P \in Y_1 \subseteq Y_2$. Then $f(P)=0$ so $f \in I(Y_1)$.
+
+		\item Each $Y_i \subseteq Y_1 \cup Y_2$ so by part (b), $I(Y_i) \supseteq I(Y_1 \cup Y_2)$. Hence, $I(Y_1)\cap I(Y_2) \supseteq I(Y_1 \cup Y_2)$. On the other hand,let $f \in (I(Y_1)\cap I(Y_2))^h$. Then $f[Y_1], f[Y_2]\subseteq \curly{0}$. Thus, $f[Y_1 \cup Y_2]\subseteq \curly{0}$ so $f \in I(Y_1 \cup Y_2)^h$. As these ideals are homogeneous, the homogeneous elements generate so we have $I(Y_1) \cap I(Y_2) \subseteq I(Y_1 \cup Y_2)$.
+
+		\item Let $f \in I(Z(\a))^h$ with $\deg f > 0$. Then by definition, for all $P \in Z(\a)$, $f(P)=0$. Then by the homogenous Nullstellensatz (\ref{1.1.1}), $f \in \sqrt \a$. Hence, $0$ and all nonconstant homogeneous polynomials $f \in I(Z(\a))$ are in $\sqrt a$. Furthermore, as $Z(\a)\neq 0$, $k \cap I(Z(\a))^h = \curly{0}$. Of course, $0$ is also in $I(Z(\a))^h$ and $\sqrt \a$. Hence, $I(Z(\a))^h \subseteq \sqrt \a$. As all these ideals are homogeneous, this proves $I(Z(\a))\subseteq \sqrt \a$. Of course, if $f^n(P)=0$ then $f(P)=0$. Thus, $I(Z(\a))$ is radical and $\a \subseteq I(Z(\a)) \subseteq \sqrt \a$ so we achieve equality.
+
+		\item We of course have $Y \subseteq Z(I(Y))$, so $\overline Y \subseteq Z(I(Y))$. On the other hand, let $Y \subseteq Z(\a)$ for some homogeneous ideal $\a$. By definition, this is a generic closed set containing $Y$. Furthermore, this means that for all $P \in Y$ and $f \in \a^h$, $f(P)=0$. Hence, $\a^h \subseteq I(Y)$. As $\a$ is homogeneous, $\a \subseteq I(Y)$ so $Z(\a) \supseteq Z(I(Y))$. As $Z(\a)$ was arbitrary, $Z(I(Y))=\overline Y$.
+	\end{enumerate}	
+\end{proof}

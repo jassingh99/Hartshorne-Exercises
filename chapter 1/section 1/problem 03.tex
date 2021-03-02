@@ -1,0 +1,24 @@
+\label{1.1.3}
+
+Let $Y$ be the algebraic set in $\A^3$ defined by the two polynomials $x^2 - yz$ and $xz - x$. Show that $Y$ is the union of three irreducible components. Describe them and find their prime ideals.
+
+\begin{proof}
+    By definition, $Y = Z(x^2 - yz) \cap Z(xz - x)$.
+    \begin{align*}
+        Z(x^2 - yz) \cap Z(xz - x) &= Z(x^2 - yz) \cap Z((x)(z - 1))\\
+        &= Z(x^2 - yz) \cap (Z(x) \cup Z(z - 1))\\
+        &= Z(x^2 - yz) \cap Z(x) \cup Z(x^2 - yz) \cap Z(z - 1)\\
+        &= Z(x^2 - yz, x) \cup Z(x^2 - yz, z - 1)\\
+        &= Z(yz, x) \cup Z(x^2 - yz, z - 1)\\
+        &= Z(yz, x) \cup Z(x^2 - yz + y(z - 1), z - 1)\\
+        &= Z(yz, x) \cup Z(x^2 - y, z - 1)\\
+        &= Z(yz) \cap Z(x) \cup Z(x^2 - y, z - 1)\\
+        &= (Z(y) \cup Z(z)) \cap Z(x) \cup Z(x^2 - y, z - 1)\\
+        &= (Z(y) \cap Z(x) \cup Z(z) \cap Z(x)) \cup Z(x^2 - y, z - 1)\\
+        &= Z(x, y) \cup Z(x, z) \cup Z(x^2 - y, z - 1)
+    \end{align*}
+    
+    We now seek to show that $(x^2 - y, z - 1)$ is prime. Indeed, define the map $k[x, y, z] \longrightarrow k[t]$ via $x \mapsto t$, $y \mapsto t^2$, $z \mapsto 1$. This is an isomorphism and $k[t]$ is a domain. Thus, we have $Y = Z(x, y) \cup Z(x, z) \cup Z(x^2 - y, z - 1)$ a union of three irreducible components. Their prime ideals are as given and we now geometrically describe each one of these.
+    
+    $Z(x, y) = \{(a, b, c) \in \A^3 \mid a = b = 0\}$ so this is just the $z$ axis. Similarly, $Z(x, z)$ is the $y$ axis. Finally, $Z(x^2 - y, z - 1) = \{(a, b, c) \in \A^3 \mid a^2 = b, c = 1\} = \{(a, a^2, 1)\}$. This is a parabola sitting in the plane $z = 1$ with vertex at $(0, 0, 1)$ opening in the $y$ axis. Hence, $Y$ is the union of two lines, the $y$ and $z$ axes, and the parabola just described.
+\end{proof}

@@ -1,0 +1,11 @@
+\label{1.1.2}
+
+\textit{The Twisted Cubic Curve}. Let $Y \subseteq \A^3$ be the set $Y = \{(t, t^2, t^3) \mid t \in k\}$. Show that $Y$ is an affine variety of dimension 1. Find generators for the ideal $I(Y)$. Show that $A(Y)$ is isomorphic to a polynomial ring in one variable over $k$. We say that $Y$ is given by the \textit{parametric representation} $x = t, y = t^2, z = t^3$.
+
+\begin{proof}
+    Take coordinates $x, y, z$ observe that $Y$ satisfies the equations $z = x^3, y = x^2$. We claim therefore that $Y = Z(I)$. Indeed, we certainly have $Y \subseteq Z(I)$. On the other hand, let $(a, b, c) \in Z(I)$. Then $c = a^3, b = a^2$ so $(a, b, c) = (a, a^2, a^3) \in Y$. Hence, $Y = Z(I)$ and is therefore an algebraic set.
+    
+    Consider $k[x, y, z] \longrightarrow k[t]$ via $x \mapsto t$, $y \mapsto t^2$, $z \mapsto t^3$. The kernel is the $f$ such that $f(t, t^2, t^3) = 0$, which is precisely $I(Y)$ (algebraically closed fields are infinite and polynomials correspond to polynomial functions over an infinite field). Hence, $A(Y) \cong k[t]$. Hence, $Y$ is an affine variety of dimension 1.
+    
+    All that is left to do is to find generators for $I(Y)$. We claim therefore that $I = I(Y)$ so that the above generators work. Indeed, let $f \in I(Y)$. Then $f(t, t^2, t^3) = 0$. Write $f = \sum a_{ijk} x^i y^j z^k$. This condition therefore says that $\sum a_{ijk} t^{i + 2j + 3k} = 0$. Furthermore, in the quotient $k[x, y, z]/(z - x^3, y - x^2)$, $f = \sum a_{ijk} x^{i + 2j + 3k}$. This equals $0$ by the above, so $f \in I$ as desired.
+\end{proof}

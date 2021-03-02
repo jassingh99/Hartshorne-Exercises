@@ -1,0 +1,17 @@
+\label{1.2.5}
+
+\begin{enumerate}
+    \item $\P^n$ is a Noetherian topological space.
+    
+    \item Every algebraic set in $\P^n$ can be written uniquely as a finite union of irreducible algebraic sets, no one containing another. These are called its \textit{irreducible components}.
+\end{enumerate}
+
+\begin{proof}
+\begin{enumerate}
+	\item Let $Y_1 > Y_2 > \dots$ be closed subsets of $\P^n$. Then we have $I(Y_1) < I(Y_2) < \dots$ in the coordinate ring $k[x_0, \dots, x_n]$. But this ring is Noetherian - contradiction.
+	
+	\item First note that a closed subspace of a Noetherian space is itself Noetherian. Indeed, a chain in the subspace is a chain in the superspace. So we prove this result for a general Noetherian space $X$.
+	
+		If $X$ is irreducible then we are done. Else, we have $X=X_0 \cup X_1$ for some proper closed subsets $X_i$. We can proceed this process to $X_0 = X_{00} \cup X_{01}$ and $X_1 =X_{10} \cup X_{11}$. Continue this until everything in sight is irreducible. This will happen in finitely many steps, as if not there is some binary string $b_0 b_1 \dots$ such that $X_{b_0} > X_{b_0 b_1} > \dots$ - contradicting Noetheriannessitudity. Now, if $X = X_0 \cup \dots \cup X_n$ are irreducible, we can omit any containments so suppose no $X_i \subseteq X_j$. If in addition we have $X = Y_0 \cup \dots \cup Y_m$ an irreducible decomposition. Then each $X_i \subseteq Y_{\sigma(i))}$ for some $0 \leq \sigma(i) \leq m$. Similarly, each $Y_j \subseteq X_{\tau(j)}$ for some $0 \leq \tau(j)\leq n$. Then $X_i \subseteq X_{\tau(\sigma(i))}$, so by assumption $X_i = X_{\tau(\sigma(i))}$. Similarly, $Y_j = Y_{\sigma(\tau(i))}$. Thus, these are inverses so these decompositions are the same up to permutation.
+\end{enumerate}
+\end{proof}

@@ -1,0 +1,23 @@
+\label{1.1.1}
+
+\begin{enumerate}[label = (\alph*)]
+    \item Let $Y$ be the plane curve $y = x^2$. Show that $A(Y)$ is isomorphic to a polynomial ring in one variable over $k$.
+    
+    \item Let $Z$ be the plane curve $xy = 1$. Show that $A(Z)$ is not isomorphic to a polynomial ring in one variable over $k$.
+    
+    \item Let $f$ be an irreducible quadratic polynomial in $k[x, y]$, and let $W$ be the conic defined by $f$. Show that $A(W)$ is isomorphic to $A(Y)$ or $A(Z)$. Which one is it when?
+\end{enumerate}
+
+\begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item $A(Y) = k[x, y]/(y - x^2)$. Consider $k[x, y]/(y - x^2) \longrightarrow k[t]$ via $x \mapsto t$, $y \mapsto t^2$. This is an isomorphism.
+        
+        \item $A(Z) = k[x, y]/(xy - 1) \cong k[x, x^{-1}] \not\cong k[t]$.
+        
+        \item[INCOMPLETE] $f = ax^2 + bx + cxy + dy + ey^2 + f = (ax^2 + cxy + ey^2) + (bx + dy + f)$. By a change of variables we can diagonalize the homogeneous summand to a sum of squares. As $k$ is algebraically closed it can be factored into linear polynomials, so after a change of variables we get $f = (Ax + By)(Cx + Dy) + (bx + dy + f)$.
+        
+        something something nondegenerate conics something something matrix form
+        
+        **change variables something something homogeneous linear terms are lin dep/lin indep**
+    \end{enumerate}
+\end{proof}

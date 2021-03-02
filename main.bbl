@@ -1,0 +1,117 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global}
+    \entry{eisenbudcommutative}{book}{}
+      \name{author}{1}{}{%
+        {{hash=33da1627c8994ee2d56a2e5841ed6581}{%
+           family={Eisenbud},
+           familyi={E\bibinitperiod},
+           given={D.},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{33da1627c8994ee2d56a2e5841ed6581}
+      \strng{fullhash}{33da1627c8994ee2d56a2e5841ed6581}
+      \strng{bibnamehash}{33da1627c8994ee2d56a2e5841ed6581}
+      \strng{authorbibnamehash}{33da1627c8994ee2d56a2e5841ed6581}
+      \strng{authornamehash}{33da1627c8994ee2d56a2e5841ed6581}
+      \strng{authorfullhash}{33da1627c8994ee2d56a2e5841ed6581}
+      \field{labelalpha}{Eisenbud}
+      \field{sortinit}{1}
+      \field{sortinithash}{50c6687d7fc80f50136d75228e3c59ba}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9780387942698}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{shorthand}{Eisenbud}
+      \field{title}{Commutative Algebra: With a View Toward Algebraic Geometry}
+      \field{year}{1995}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=Fm\_yPgZBucMC
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=Fm%5C_yPgZBucMC
+      \endverb
+    \endentry
+    \entry{hartshorne}{book}{}
+      \name{author}{1}{}{%
+        {{hash=7b226c6f3dcfcccf3943883cec9f4b09}{%
+           family={Hartshorne},
+           familyi={H\bibinitperiod},
+           given={R.},
+           giveni={R\bibinitperiod}}}%
+      }
+      \list{publisher}{1}{%
+        {Springer New York}%
+      }
+      \strng{namehash}{7b226c6f3dcfcccf3943883cec9f4b09}
+      \strng{fullhash}{7b226c6f3dcfcccf3943883cec9f4b09}
+      \strng{bibnamehash}{7b226c6f3dcfcccf3943883cec9f4b09}
+      \strng{authorbibnamehash}{7b226c6f3dcfcccf3943883cec9f4b09}
+      \strng{authornamehash}{7b226c6f3dcfcccf3943883cec9f4b09}
+      \strng{authorfullhash}{7b226c6f3dcfcccf3943883cec9f4b09}
+      \field{labelalpha}{Hartshorne}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9781475738490}
+      \field{series}{Graduate Texts in Mathematics}
+      \field{shorthand}{Hartshorne}
+      \field{title}{Algebraic Geometry}
+      \field{year}{2013}
+      \verb{urlraw}
+      \verb https://books.google.com/books?id=7z4mBQAAQBAJ
+      \endverb
+      \verb{url}
+      \verb https://books.google.com/books?id=7z4mBQAAQBAJ
+      \endverb
+    \endentry
+    \entry{stacks}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=abb7996abcbb3ba4cf4194c8dcb595ca}{%
+           family={{Stacks Project Authors}},
+           familyi={S\bibinitperiod},
+           given={The},
+           giveni={T\bibinitperiod}}}%
+      }
+      \strng{namehash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \strng{fullhash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \strng{bibnamehash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \strng{authorbibnamehash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \strng{authornamehash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \strng{authorfullhash}{abb7996abcbb3ba4cf4194c8dcb595ca}
+      \field{labelalpha}{Stacks}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{howpublished}{\url{https://stacks.math.columbia.edu}}
+      \field{shorthand}{Stacks}
+      \field{title}{\textit{Stacks Project}}
+      \field{year}{2020}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

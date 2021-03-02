@@ -1,0 +1,10 @@
+\label{1.1.6}
+
+Any nonempty open subset of an irreducible topological space is dense and
+irreducible. If $Y$ is a subset of a topological space $X$, which is irreducible in its induced topology, then the closure $\overline{Y}$ is also irreducible.
+
+\begin{proof}
+    Let $\emptyset \neq U, V \subseteq X$ be open, $X$ irreducible. We claim that $U \cap V \neq \emptyset$. If they were disjoint, $X = X - (U \cap V) = (X - U) \cup (X - V)$. These are proper closed sets so this contradicts irreducibility of $X$.
+    
+    Now, let $Y \subseteq X$ be irreducible in the subspace topology. Let $\overline{Y} = A \cup B$ be closed sets. We want to show that one of $A$ or $B$ are equal to $\overline{Y}$. Indeed, $(A \cap Y) \cup (B \cap Y) = Y$, which is irreducible, so WLOG say $A \cap Y = Y$. Hence, $Y \subseteq A$ so $A \cup B = \overline{Y} \subseteq A$ and $A = \overline{Y}$, proving irreducibility.
+\end{proof}

@@ -1,0 +1,26 @@
+\label{1.1.10}
+
+\begin{enumerate}[label = (\alph*)]
+    \item If $Y$ is any subset of a topological space $X$, then $\dim Y \leq \dim X$.
+    
+    \item If $X$ is a topological space which is covered by a family of open subsets $\{U_i\}$, then $\dim X = \sup \dim U_i$.
+    
+    \item Give an example of a topological space $X$ and a dense open subset $U$ with $\dim U < \dim X$.
+    
+    \item If $Y$ is a closed subset of an irreducible finite-dimensional topological space $X$, and if $\dim Y = \dim X$, then $Y = X$.
+    
+    \item Give an example of a noetherian topological space of infinite dimension.
+\end{enumerate}
+
+\begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item Take a chain of irreducible closed subsets $Z_0 < \dots < Z_r \subseteq Y$. The closures $\overline{Z_i}$ are irreducible and $\overline{Z_i} < \overline{Z_{i + 1}}$ as $Z_i = \overline{Z_i} \cap Y$. Thus, every chain of irreducible closed subsets of $Y$ lifts to a chain of irreducible closed subsets of $X$ with the same length. Hence, $\dim Y \leq \dim X$.
+        
+        \item By (a) $\dim U_i \leq \dim X$. Hence, $\sup \dim U_i \leq \dim X$. We claim that if $Z_0 < \dots < Z_n$ is a chain of irreducible closed subsets of $X$ then some $U_i$ has a chain of the same length. This will show that $\dim X \leq \sup \dim U_i$, proving equality. Let $U_i \cap Z_0 \neq \emptyset$. We claim $Z_j \cap U_i < Z_{j + 1} \cap U_i$, which will become our chain in $U_i$ of the same length. Indeed, $Z_j \cap U_i \subseteq Z_j$ is a nonempty open subset and is therefore dense and irreducible. Hence, $\overline{Z_j \cap U_i} = Z_j$. Hence, if $Z_j \cap U_i = Z_{j + 1} \cap U_i$ then their closures are equal and $Z_j = Z_{j + 1}$ a contradiction.
+        
+        \item Consider the space $X = \{a, b, c\}$ with topology $\{\emptyset, \{a\}, \{a, b\}, \{a, b, c\}\}$. The closed sets are therefore $\{\{a, b, c\}, \{b, c\}, \{c\}, \emptyset\}$. Hence, $\{c\} < \{b, c\}$ is a chain of irreducible closed subsets so $\dim X \geq 1$. Furthermore, $\{a\}$ is an open generic point (it intersects all nonempty open subsets) so it is a dense open set with dimension $0 < 1$.
+        \item Take a maximal chain $Z_0 < \dots < Z_r$ in $Y$. Then these $Z_i$ are closed and irreducible in $X$. Hence, we have the chain $Z_0 < \dots < Z_r \subseteq X$. As $\dim X = \dim Y = r$, $X = Z_r \subseteq Y$.
+        
+        \item Let $R$ be a noetherian ring of infinite dimension (see the example due to Nagata \cite[\href{https://stacks.math.columbia.edu/tag/02JC}{02JC}]{stacks}). Then $\spec R$ is a noetherian topological space of infinite dimension.
+    \end{enumerate}
+\end{proof}

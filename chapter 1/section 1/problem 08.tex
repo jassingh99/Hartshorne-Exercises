@@ -1,0 +1,18 @@
+\label{1.1.8}
+
+Let $Y$ be an affine variety of dimension $r$ in $\A^n$. Let $H$ be a hypersurface in $\A^n$, and assume that $Y \nsubseteq H$. Then every irreducible component of $Y \cap H$ has dimension $r - 1$.
+
+\begin{proof}
+    Let $A = k[x_1, \dots, x_n]$. As $H$ is a hypersurface, $H = Z(f)$ for some $f$ irreducible. Let $Y = Z(\p)$ with $\p$ prime. Then $B = A/\p$ is the coordinate ring of $Y$. Consider $\overline{f}$ in $B$. As $Y \nsubseteq H$, $(f) \nsubseteq \p$. Thus, $f \notin \p$ so $\overline{f}$ is nonzero in $B$.
+    
+    Let $F \subseteq Y \cap H$ be an irreducible component. Then $F = Z(\q)$ for some prime $\q$. Furthermore, every irreducible closed subset of $Y \cap H$ is contained in some irreducible component. In other words, irreducible components are maximal with respect to being an irreducible closed subset of $F \cap Y$. Thus, $\q$ is minimal with respect to primes containing $\p + (f)$ as $Y \cap H = Z(\p + (f))$.
+    
+    Observe that $A/(\p + (f)) \cong B/\parens{\overline{f}}$. $B$ is a domain and as discussed, $\overline{f} \neq 0$ in $B$. By \cite[13.11]{eisenbudcommutative}, $\dim B/\parens{\overline{f}} = \dim B - 1$ so by \cite[13.4]{eisenbudcommutative}, $\codim\parens{\overline{f}} = 1$. We are trying to compute $\dim A/\q = \dim B/(\q/\p)$. By \cite[13.4]{eisenbudcommutative}, this is $\dim B - \codim \q/\p$. The claim is therefore that $\codim \q/\p = 1$. $f \in \q$ so $\overline{f} \in \q/\p$. Furthermore, $\q$ is minimal with respect to containing $\p$ and $f$ so $\q/\p$ is minimal with respect to containing $\overline{f}$. By Krull's principal ideal theorem, $\codim \q/\p \leq 1$. As $\codim\parens{\overline{f}} = 1$ and $\parens{\overline{f}} \subseteq \q/\p$, we have $\codim \q/\p = 1$. In summary,
+    \begin{align*}
+        \dim F &= \dim A/\q\\
+        &= \dim B/(\q/\p)\\
+        &= \dim B - \codim \q/\p\\
+        &= \dim B - 1\\
+        &= \dim Y - 1
+    \end{align*}
+\end{proof}
