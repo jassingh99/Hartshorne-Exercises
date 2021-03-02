@@ -1,11 +1,18 @@
 \label{1.2.6}
 
 If $Y$ is a projective variety with homogeneous coordinate ring $S(Y)$, show that
-$\dim S(Y) = \dim Y + 1$. [\textit{Hint}: Let $\varphi_i U_i \longrightarrow \A^n$ be the homeomorphism of \cite[2.2]{hartshorne},
+$\dim S(Y) = \dim Y + 1$. [\textit{Hint}: Let $\varphi_i: U_i \longrightarrow \A^n$ be the homeomorphism of \cite[2.2]{hartshorne},
 let $Y_i$ be the affine variety $\phi_i[Y \cap U_i]$, and let $A(Y_i)$ be its affine coordinate ring. Show that $A(Y_i)$ can be identified with the subring of elements of degree $0$ of the
 localized ring $S(Y)_{x_i}$· Then show that $S(Y)_{x_i} \cong A(Y_i)[x, x^{-1}]$. Now use \cite[1.7]{hartshorne}),
-\cite[1.8A]{hartshorne}, and (Ex \ref{1.1.10}), and look at transcendence degrees. Conclude also that $dim Y = dim Y_i$ whenever $Y_i$ is nonempty.]
+\cite[1.8A]{hartshorne}, and (Ex \ref{1.1.10}), and look at transcendence degrees. Conclude also that $\dim Y = \dim Y_i$ whenever $Y_i$ is nonempty.]
 
 \begin{proof}
-    
+    We will follow this hint. We want to identity $A(Y_i)$ with $(S(Y)_{x_i})^0$, which is the set of all $\frac{f}{x_i^d}$ such that $f \in k[x_0, \dots, x_n]$ is homogeneous of degree $d$. We will consider the coordinate ring $A(Y_i)$ to have coordinates $x_0, \dots, \widehat{x_i}, \dots, x_n$. We define the map
+
+    \begin{align*}
+        k[x_0, \dots, \widehat{x_i}, \dots, x_n] &\longrightarrow (S(Y)_{x_i})\\
+        f &\mapsto f\parens{\frac{x_0}{x_i}, \dots, \widehat{\frac{x_i}{x_i}}, \dots, \frac{x_n}{x_i}}
+    \end{align*}
+
+    We want this map to factor through $A(Y_i)$. What then is $J(Y_i)$? By definition, it is the $f \in k[x_0, \dots, \widehat{x_i}, \dots, x_n]$ such that $f(a) = 0$ for all $a \in Y_i$. Of course, $Y_i = \phi_i[Y \cap U_i]$ so any such $a$ will look like $\parens{\frac{a_0}{a_1}, \dots, \widehat{\frac{a_i}{a_i}},, \dots, \frac{a_n}{a_i}}$. Indeed, we we take some $f \in J(Y_i)$ then for any $[a_0 : \dots : a_n] \in Y \cap U_i$, $f\parens{\frac{x_0}{x_i}, \dots, \widehat{\frac{x_i}{x_i}}, \dots, \frac{x_n}{x_i}}$ vanishes on $[a_0 : \dots : a_n] = \bracket{\frac{a_0}{a_i} : \dots : 1 : \dots : \frac{a_n}{a_i}}$. Hence, this map sends $J(Y_i) \mapsto I(Y \cap U_i) \supseteq I(Y)$. Of course, we need to map into $I(Y)$.
 \end{proof}
