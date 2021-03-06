@@ -3,5 +3,15 @@
 A projective variety $Y \subseteq \P^n$ has dimension $n - 1$ if and only if it is the zero set of a single irreducible homogeneous polynomial $f$ of positive degree. $Y$ is called a \textit{hypersurface} in $\P^n$.
 
 \begin{proof}
-    
+    $(\Longleftarrow)$. The ideal $(f)$ has height 1 so by \ref{1.2.6}, $\dim Z(f) = \dim S/(f) - 1 = (n + 1) - 1 - 1 = n - 1$.
+
+    $(\Longrightarrow)$. Let $Y = Z(\p)$ have dimension $n - 1$. Then by \ref{1.2.6}, $\dim S(Y) = n$. As $\dim S(Y) = \dim S - \codim \p$, this tells us that $\codim \p = 1$. As $S$ is a UFD, this means that $\p = (f)$ for some $\deg f > 0$.
+
+    We must therefore show that $f$ is homogeneous. As the ideal $(f) = \p$ is homogeneous, we can decompose $(f) = \bigoplus (f) \cap S_d$. Consider therefore the homogeneous decomposition $f = \sum f_e$. As $(f)$ is homogeneous, each $f_e \in (f)$. Furthermore, as $(f)$ is not the unit ideal, $(f) \cap S_0 = 0$. As $(f) \neq 0$, we must have some $d > 0$ such that $(f) \cap S_d \neq 0$. Let $d$ be minimal with respect to this property and let $g \in (f) \cap S_d - 0$. Then $g \in (f)$ so $f \mid g$. Write $fh = g$, so in the homogeneous decompositions we get $(\sum f_e) (\sum h_e) = g_d = g$. We can compute this sum as follows:
+    \begin{align*}
+        \parens{\sum f_e} \parens{\sum h_e} &= \sum_{e, e'} f_e h_{e'}\\
+        &= \sum_{k \geq 0} \sum_{k = e + e'} f_e h_{e'}
+    \end{align*}
+
+    So we have $\sum_{e + e' = d} f_e h_{e'} = g_d$ and all other terms are $0$. We additionally have $f_0 = 0$ as $f_0 \in (f) \cap S_0 = 0$. Furthermore, by minimality of $d$, there can be no $0 < e < d$ such that $f_e \neq 0$. Hence, for all $0 \leq e < d$, $f_e = 0$. As $f \mid g$, $f$ cannot have any terms of degree higher than $d$. Thus, $f = f_d$ is homogeneous.
 \end{proof}

@@ -4,9 +4,13 @@
     \item $\dim \P^n = n$.
     
     \item If $Y \subseteq \P^n$ is a quasi-projective variety, then $\dim Y = \dim \overline{Y}$.\\
-    [\textit{Hint}: Use (Ex. \ref{1.2.6}) to reduce to \cite[1.10]{hartshorne}.]
+    \textit{Hint}: Use (Ex. \ref{1.2.6}) to reduce to \cite[1.10]{hartshorne}.
 \end{enumerate}
 
 \begin{proof}
-    
+\begin{enumerate}[label = (\alph*)]
+    \item $S(\P^n) = k[x_0, \dots, x_n]$ has dimension $n + 1$ so this follows from \ref{1.2.6}.
+
+    \item By \ref{1.1.10}(b), $\dim \overline Y = \sup \dim \overline Y \cap U_i$. By \cite[1.10]{hartshorne}, $\dim Y \cap U_i = \dim \overline{Y \cap U_i}$, where the closure is computed in $U_i \cong \A^n$. Furthermore, $\overline{Y \cap U_i} = \overline{Y} \cap U_i$, where on the right hand side the closure is in $\P^n$. This is an elementary fact about the subspace topology. In other words, we have $\dim \overline Y \cap U_i = \dim Y \cap U_i$. Taking $\sup$ on both sides and using \ref{1.1.10}(b) we get the equality $\dim \overline Y = \dim Y$.
+\end{enumerate}
 \end{proof}

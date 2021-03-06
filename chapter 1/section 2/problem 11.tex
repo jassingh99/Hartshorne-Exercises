@@ -16,5 +16,15 @@
 \end{enumerate}
 
 \begin{proof}
-    
+    \begin{enumerate}[label=(\alph*)]
+        \item $(i \Longrightarrow ii)$. Let $I(Y) = (f_1, \dots, f_r)$ linear. Then $Y = Z(I(Y)) = \bigcap Z(f_i)$.
+
+        $(ii \Longrightarrow i)$. Let $Y = \bigcap_{i \in I} Z(f_i)$. We therefore have $I(Y) = \sqrt{(f_i : i \in I)}$. As $S$ is N\"otherian we can find a finite set of generators among the $f_i$, i.e. $(f_1, \dots, f_r) = (f_i : i \in I)$. Indeed, find the maximal such finitely generated sub-ideal. Thus, $Y = Z(f_1, \dots, f_r)$. Write $f_i = \sum f_{ij} x_j$. Then $[a_0 : \dots : a_n] \in Y$ iff $(f_{ij})_{ij} \begin{pmatrix}
+            a_0\\
+            \vdots\\
+            a_n
+        \end{pmatrix} = 0$. By row or column reduction, we are a linear change of coordinates away from $Y$ being $Z(y_0, \dots, y_s)$ for new coordinates $y_0, \dots, y_n$. (COULD USE SOME MORE DETAIL)
+
+        \item 
+    \end{enumerate}
 \end{proof}
