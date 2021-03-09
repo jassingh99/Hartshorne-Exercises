@@ -53,6 +53,55 @@
       \verb https://books.google.com/books?id=Fm%5C_yPgZBucMC
       \endverb
     \endentry
+    \entry{cox-ideals}{book}{}
+      \name{author}{3}{}{%
+        {{hash=f491ad1431e56daa11842f8c7ad8aa73}{%
+           family={Cox},
+           familyi={C\bibinitperiod},
+           given={David\bibnamedelima A.},
+           giveni={D\bibinitperiod\bibinitdelim A\bibinitperiod}}}%
+        {{hash=90d202ee474e4f8980fc2df6c7f982f0}{%
+           family={Little},
+           familyi={L\bibinitperiod},
+           given={John\bibnamedelima B.},
+           giveni={J\bibinitperiod\bibinitdelim B\bibinitperiod}}}%
+        {{hash=7b115c829c11f9161b7d7d62ffa17444}{%
+           family={O'Shea},
+           familyi={O\bibinitperiod},
+           given={Donal},
+           giveni={D\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Springer}%
+      }
+      \strng{namehash}{75fc0801975e50c34028a270bed99bac}
+      \strng{fullhash}{75fc0801975e50c34028a270bed99bac}
+      \strng{bibnamehash}{75fc0801975e50c34028a270bed99bac}
+      \strng{authorbibnamehash}{75fc0801975e50c34028a270bed99bac}
+      \strng{authornamehash}{75fc0801975e50c34028a270bed99bac}
+      \strng{authorfullhash}{75fc0801975e50c34028a270bed99bac}
+      \field{labelalpha}{CLO07}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{shorttitle}
+      \field{edition}{3rd ed}
+      \field{isbn}{978-0-387-35650-1 978-0-387-35651-8}
+      \field{series}{Undergraduate texts in mathematics}
+      \field{shorttitle}{Ideals, varieties, and algorithms}
+      \field{title}{Ideals, varieties, and algorithms: an introduction to computational algebraic geometry and commutative algebra}
+      \field{year}{2007}
+      \verb{file}
+      \verb Cox, Little - Ideals, varieties, and algorithms - an introduction to computational algebraic geometry and commutative algebra.pdf:/home/jas/Documents/Textbooks/Algebra/Commutative Algebra/Cox, Little - Ideals, varieties, and algorithms - an introduction to computational algebraic geometry and commutative algebra.pdf:application/pdf
+      \endverb
+      \keyw{algebra,algebraic geometry,commutative algebra}
+    \endentry
     \entry{hartshorne}{book}{}
       \name{author}{1}{}{%
         {{hash=7b226c6f3dcfcccf3943883cec9f4b09}{%

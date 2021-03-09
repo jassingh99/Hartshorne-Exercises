@@ -3,8 +3,10 @@
 \textit{The Segre Embedding}. Let $\psi: \P^r \times \P^s \longrightarrow \P^N$ be the map defined by sending the
 ordered pair $(a_0 , \dots, a_r) \times (b_0 , \dots, b_s)$ to $(\dots, a_i b_j, \dots)$ in lexicographic order, where $N = rs + r + s$. Note that $\psi$ is well-defined and injective. It is called the
 \textit{Segre embedding}. Show that the image of $\psi$ is a subvariety of $\P^N$. [\textit{Hint}: Let the
-homogeneous coordinates of $\P^N$ be $\{z_{ij} \mid i = 0, \dots, r, j = 0, \dots, s\}$, and let $\a$ be the kernel of the homomorphism $k[{z_{ij}}] \longrightarrow k[x_0 , \dots, x_r, y_0 , \dots, y_s]$ which sends $z_{ij}$ to $x_i y_j$. Then show that $\Im \psi = Z(\a)$.]
+homogeneous coordinates of $\P^N$ be $\{z_{ij} \mid i = 0, \dots, r, j = 0, \dots, s\}$, and let $\a$ be the kernel of the homomorphism $k[{z_{ij}}] \longrightarrow k[x_0 , \dots, x_r, y_0 , \dots, y_s]$ which sends $z_{ij}$ to $x_i y_j$. Then show that $\im \psi = Z(\a)$.]
 
 \begin{proof}
-    
+    As suggested, we will show that the image of $\psi$ is $Z(\a)$ as defined in the body of the question. Indeed, let $(P, Q) \in \P^r \times \P^s$ and $f \in \a^h$. Then $f(\psi(P, Q)) = \theta(f)(a_0, \dots, b_s) = 0$.
+
+    On the other hand take some $p \in Z(\a)$. Write $P = [c_{ij}] \in \P^N$. Then some $c_{kl} \neq 0$, so we work in the affine patch on which is it $1$. We'll start defining our preimage to this via $a_k = b_l = 1$. We're trying to make it so that $c_{ij} = a_i b_j$ for all $i, j$. In particular, this would mean that $a_i = a_i b_l = c_{il}$ and $b_j = a_k b_j = c_{kj}$. So indeed, we take these as our definitions and claim that $([a_0 : \dots : a_r], [b_0 : \dots : b_s]) \mapsto P$. Indeed, that means we want to show that $c_{ij} = a_i b_j$. Consider the relations $(x_i y_j) (x_m y_n) = (x_i y_n)(x_m y_j)$. Hence, the polynomials $z_{ij} z_{mn} - z_{in} z_{mj} \in \a^h$. In particular, we have that $c_{ij} c_{kl} = c_{kj} c_{il}$. Using the definitions we already have, this means exactly that $c_{ij} = a_i b_j$. Thus, $P \in \im \psi$.
 \end{proof}

@@ -7,5 +7,11 @@
 \end{enumerate}
 
 \begin{proof}
-    
+    \begin{enumerate}[label = (\alph*)]
+        \item We have $Q_1 \cap Q_2 = Z(x^2 - yw, xy - zw)$. Recall that $Z(I(Y_1 \cup Y_2)) = Z(I(Y_1) \cap I(Y_2)) = Y_1 \cup Y_2$, when these are closed. This suggests that to realize something as the union of two closed subsets, we want to find a primary decomposition.
+
+        Indeed, observe that $(x^2 - yw, xy - zw) \subseteq (x, w) \cap (xz - y^2, yw - x^2, zw - xy)$. The former defines a line and the latter defines a twisted cubic (just believe, the proofs of \ref{1.2.9} and \ref{1.2.12} are insufficient but it shouldn't be tooooo hard to show that these degree two guys generate, in fact I think (?) this holds in general). We therefore seek to show equality. Take let's consider elements of $(x, w) \cap (xz - y^2, yw - x^2, zw - xy)$. First of all, since $f \in (x, w)$ iff each of its summands are (this can be seen directly or through the theory of monomial ideals ala \cite{cox-ideals}. In any case, take some $f (xz - y^2) + g(yw - x^2) + h(zw - xy) \in (x, w) \cap (xz - y^2, yw - x^2, zw - xy)$ The last two terms are clearly in $(x, w)$, but we additionally need $f (xz - y^2) \in (x, w)$. Indeed, this will occur iff $f \in (x, w)$. Observe that in the quotient by $(x^2 - yw, xy - zw)$, we have $xzw - wy^2 = x^2 y - wy^2 = ywy - wy^2 = 0$ and $x^2 z - xy^2 = ywz - xy^2 = ywz - zwy = 0$. Thus, whenever $f \in (x, w)$ the associated summand $f(xz - y^2) \in (x^2 - yw, xy - zw)$. Thus, we indeed that $(x, w) \cap (xz - y^2, yw - x^2, zw - xy) = (x^2 - yw, xy - zw)$. Hence, $Q_1 \cap Q_2 = Z((x, w) \cap (xz - y^2, yw - x^2, zw - xy)) = Z(x, w) \cup Z((xz - y^2, yw - x^2, zw - xy))$, which is a union of a line and a twisted cubic.
+
+        \item First, observe that $C \cap L = Z(x^2 - yz, y) = Z(x^2, y) = Z(x, y) = \curly{[0 : 0 : 1]}$. On the other hand, $I(C) + I(L) = (x^2 - yz, y) = (x^2, y) \neq (x, y) = I(P)$. Note that the equations given for $C$ an $L$ are irreducible so there is no fuss.
+    \end{enumerate}    
 \end{proof}

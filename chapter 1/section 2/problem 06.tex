@@ -3,7 +3,7 @@
 If $Y$ is a projective variety with homogeneous coordinate ring $S(Y)$, show that
 $\dim S(Y) = \dim Y + 1$. [\textit{Hint}: Let $\varphi_i: U_i \longrightarrow \A^n$ be the homeomorphism of \cite[2.2]{hartshorne},
 let $Y_i$ be the affine variety $\phi_i[Y \cap U_i]$, and let $A(Y_i)$ be its affine coordinate ring. Show that $A(Y_i)$ can be identified with the subring of elements of degree $0$ of the
-localized ring $S(Y)_{x_i}$· Then show that $S(Y)_{x_i} \cong A(Y_i)[x, x^{-1}]$. Now use \cite[1.7]{hartshorne},
+localized ring $S(Y)_{x_i}$· Then show that $S(Y)_{x_i} \cong A(Y_i)[x_i, x_i^{-1}]$. Now use \cite[1.7]{hartshorne},
 \cite[1.8A]{hartshorne}, and (Ex \ref{1.1.10}), and look at transcendence degrees. Conclude also that $\dim Y = \dim Y_i$ whenever $Y_i$ is nonempty.]
 
 \begin{proof}
@@ -23,7 +23,6 @@ localized ring $S(Y)_{x_i}$· Then show that $S(Y)_{x_i} \cong A(Y_i)[x, x^{-1}]
     It is now easy enough to verify that these maps are inverse. Let $f \in A(Y_i)$. Then $f \mapsto \frac{\beta_i(f)}{x_i^d} \mapsto \alpha_i(\beta_i(f))$. This is $f\parens{\frac{x_0}{x_i}, \dots, \widehat{\frac{x_i}{x_i}}, \dots, \frac{x_n}{x_i}}(x_0, \dots, 1, \dots, x_n) = f$. On the other hand, let $\frac{f}{x_i^d} \in (S(Y)_{x_i})^0$. Then $\frac{f}{x_i^d} \mapsto \alpha_i(f) \mapsto \frac{\beta_i(\alpha_i(f))}{x_i^d}$. The numerator here is $\beta_i(f(x_0, \dots, 1, \dots, x_n)) = x_i^d f\parens{\frac{x_0}{x_i}, \dots, \frac{x_i}{x_i}, \dots, \frac{x_n}{x_i}} = f$ as $f$ is homogeneous of degree $f$. 
 
     In summary, we have defined the following maps:
-
     $$
     \begin{tikzcd}[ampersand replacement = \&, row sep = 0]
         x_j \arrow[r, mapsto] \& \frac{x_j}{x_i} \\
@@ -35,7 +34,9 @@ localized ring $S(Y)_{x_i}$· Then show that $S(Y)_{x_i} \cong A(Y_i)[x, x^{-1}]
     \end{tikzcd}
     $$
 
-    Next, we will extend this to a map $A(Y_i)[x_i, x_i^{-1}] \longrightarrow S(Y)_{x_i}$ via sending $x_i \mapsto x_i$. The image of this map contains $x_i$, $x_i^{-1}$ and $(S(Y)_{x_i})^0$. Given $f$ homogeneous, $\frac{f}{x_i^d} \in (S(Y)_{x_i})^0$, so $f \in (S(Y)_{x_i})^0[x_i]$. Hence, this map is onto. I'm not yet sure how to prove that it is injective. By flatness, it suffices to show that the map $A(Y_i)[x_i] \longrightarrow S(Y)_{x_i}$ is injective. The fear is that adjoining $x_i$ adds some strange relations to $(S(Y)_{x_i})^0$. If we let $\phi$ denote this map, then we are trying to understand when $\phi(\sum f_k x_i^k) = \sum \phi(f_k) x_i^k = 0$. That is, we want all $\phi(f_k) = 0$ so that each $f_k = 0$, as the above is an isomorphism. 
+    Next, we will extend this to a map $A(Y_i)[x_i, x_i^{-1}] \longrightarrow S(Y)_{x_i}$ via sending $x_i \mapsto x_i$. The image of this map contains $x_i$, $x_i^{-1}$ and $(S(Y)_{x_i})^0$. Given $f$ homogeneous, $\frac{f}{x_i^d} \in (S(Y)_{x_i})^0$, so $f \in (S(Y)_{x_i})^0[x_i]$. Hence, this map is onto. By flatness, it suffices to show that the map $A(Y_i)[x_i] \longrightarrow S(Y)_{x_i}$ is injective.
 
-    What's strange is that the $x_j$ need not be algebraically independent in $S(Y)$. For instance, take $Y = Z(x_0 - 2 x_1)$. Perhaps there is an approach using N\"other's normalization lemma, but from here I am stuck.
+    Recall that each $\phi(f_k)$ has degree $0$ in $S(Y)_{x_i}$. Then $\phi(f_k) x_i^k$ has degree $k$ in this ring, so each term in $\sum \phi(f_k) x^k$ has different degree, so these are necessarily linearly independent. Hence, for this sum to vanish, each term $\phi(f_k) x_i^k$ must vanish as well. Since we are in a domain ($Y$ is a variety), this means that each $\phi(f_k) = 0$. $\phi$ has already been shown to be an isomorphism $A(Y_i) \longrightarrow (S(Y)_{x_i})^0$, so each $f_k$ is therefore $0$. Thus, the extension of $\phi$ to $A(Y_i)[x_i, x_i^{-1}] \longrightarrow S(Y)_{x_i}$ is an isomorphism as well.
+
+    Now, to compute $\dim S(Y)$ we need to compute $\dim A(Y_i)[x_i, x_i^{-1}]$, which is equal to the transcendence degree of $qf(A(Y_i)[x_i]) = qf(A(Y_i))(x_i)$. $x_i$ was a formal variable for $A(Y_i)$, as we took $A$ to have coordinates $x_0, \dots, \widehat{x_i}, \dots, x_n$. Hence, $\trdeg_k qf(A(Y_i))(x_i) = \trdeg_k qf(A(Y_i)) + 1 = \dim A(Y_i) + 1$. By \ref{1.1.10}(b), $\dim Y = \sup \dim Y_i$. $Y_i$ is empty when $Y \cap U_i = \emptyset$, i.e. when $Y \subseteq Z(x_i)$. In that case, $x_i \in I(Y)$ so $x_i = 0$ in $S(Y)_{x_i}$. When this is not the case (and it must not be the case for some $x_i$), then $x_i \neq 0$ in $S(Y)$ so we have inclusions $S(Y) \subseteq S(Y)_{x_i} \subseteq qf(S(Y))$. We have computed that $qf(S(Y)_{x_i}) = qf(A(Y_i))(x_i)$, which has transcendence degree $\dim A(Y_i) + 1$, which is $\dim Y_i + 1$. Thus, for all $i$ such that $Y_i \neq \emptyset$, we have $\dim Y_i = \dim S(Y) - 1$. Taking sups yields $\dim Y = \dim S(Y) - 1$, and that $\dim Y = \dim Y_i$ whenever $Y_i \neq \emptyset$.
 \end{proof}                                                                              
