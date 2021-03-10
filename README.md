@@ -5,7 +5,7 @@ Solved so far:
 # Chapter 1. Varieties
 
 ## Section 1. Affine Varieties
-Solved: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11
+Solved: 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12
 
 Incomplete: 1
 
