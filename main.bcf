@@ -2195,6 +2195,10 @@
     <bcf:citekey order="11">hartshorne</bcf:citekey>
     <bcf:citekey order="12">hartshorne</bcf:citekey>
     <bcf:citekey order="13">cox-ideals</bcf:citekey>
+    <bcf:citekey order="14">hartshorne</bcf:citekey>
+    <bcf:citekey order="15">hartshorne</bcf:citekey>
+    <bcf:citekey order="16">hartshorne</bcf:citekey>
+    <bcf:citekey order="17">hartshorne</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="ynt">
