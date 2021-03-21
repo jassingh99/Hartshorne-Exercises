@@ -13,5 +13,27 @@
 \end{enumerate}
 
 \begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item A conic is the zero set of an irreducible polynomial $f$ of degree $2$. By the results of this section, it will be fruitful to consider the coordinate rings. Indeed, by \ref{1.1.1}.c, $A(V(f)) \cong k[x, y]/(y - x^2)$ or $k[x, y]/(xy - 1)$. The former is isomorphic to $k[t]$ via $x \mapsto t$, $y \mapsto t^2$, corresponding to the map $\A^1 \longrightarrow \A^2$ via $t \mapsto (t, t^2)$. The algebra isomorphism yields an isomorphism of varieties.
 
+        In the latter case the obvious maps are $V(xy - 1) \longrightarrow \A^1 - 0$ via $(x, y) \mapsto x$ and $\A^1 - 0 \longrightarrow V(xy - 1)$ sending $t \mapsto (t, 1/t)$. The former is induced by the map $k[t] \longrightarrow k[x, y]/(xy - 1)$ sending $t \mapsto x$, and it of course has image equal to exactly $\A^1 - 0$. For the latter, we consider the map $k[x, y]/(xy - 1) \longrightarrow \mathcal O(\A^1 - 0)$ sending $x \mapto t$ and $y \mapsto 1/t$. As \cite[I.3.5]{hartshorne} was proven in this generality, this induces the map $\A^1 - 0 \longrightarrow V(xy - 1)$ we just described. It is easy to check that these are inverse to each other, and we have additionally shown that they are both maps of varieties via their rings of regular functions.
+
+        \item Take $U < \A^1$. Of course, if $\emptyset = U$ then we are done so suppose otherwise. Then $Y = \A^1 - U$ satisfies $0 < Y < \A^1$. We can therefore write $Y = V(f)$ for some nonzero, nonconstant polynomial $f \in k[x]$. We can also assume WLOG that $f$ is squarefree. If indeed $\A^1 \cong U$, then $k[x] = \mathcal O(\A^1) \cong \mathcal O(U)$ as $k$-algebras. Consider then our hypothetical isomorphism $k[x] \cong \mathcal O(U)^\times$. As this is an isomorphism of $k$-algebras, we must have had the following commutative diagram.
+        $$
+        \begin{tikzcd}
+            k[x] \arrow[rr, "\sim"] && \mathcal O(U)\\
+            & k \arrow[ur] \arrow[ul]
+        \end{tikzcd}
+        $$
+
+        This descends to the unit groups as follows.
+        $$
+        \begin{tikzcd}
+            k^\times \arrow[rr, "\sim"] && \mathcal O(U)^\times\\
+            & k^\times \arrow[ur] \arrow[ul]
+        \end{tikzcd}
+        $$
+
+        Which would imply that $\mathcal O(U)^\times = k^\times$. But as $V(f) \cap U = \emptyset$, $f \in \mathcal O(U)^\times$. Furthermore, $f$ was assumed to be nonconstant, so this is a contradiction.
+    \end{enumerate}
 \end{proof}

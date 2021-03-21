@@ -3,11 +3,17 @@
 \begin{enumerate}[label = (\alph*)]
     \item Let $\phi: X \longrightarrow Y$ be a morphism. Then for each $P \in X$, $\phi$ induces a homomorphism of local rings $\phi_P^*: \mathcal O_{\phi(P), Y} \longrightarrow \mathcal O_{P, X}$.
     
-    \item Show that a morphism $\phi$ is an isomorphism if an only if $\phi$ is a homeomorphism, an the induced map $\phi_P^*$ on local rings is an isomorphism for all $P \in X$.
+    \item Show that a morphism $\phi$ is an isomorphism if and only if $\phi$ is a homeomorphism, and the induced map $\phi_P^*$ on local rings is an isomorphism for all $P \in X$.
 
     \item Show that if $\phi[X]$ is dense in $Y$, then the map $\phi_P^*$ is injective for all $P \in X$.
 \end{enumerate}
 
 \begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item Take indeed some $(V, f) \in \mathcal O_{\phi(P), Y}$. Then $\phi(P) \in V$ and $f$ is regular on $V$. Then $f \circ \phi$ is regular on $\phi^{-1}[V]$, which contains $P$. Hence, we map $(V, f) \mapsto (\phi^{-1}[V], f \circ \phi)$. I don't want to prove that this is well defined an a homomorphism, so I appeal to the general fact that $\phi$ induces a map of sheaves $\mathcal O_Y \longrightarrow \phi_* \mathcal O_X$. These are sheaves of rings (over $Y$), so functoriality of the colimit yields this exact map on stalks.
 
+        We furthermore want to show that this is a morphism of \emph{local} rings. That is, $\m_{\phi(P)} \mapsto \m_P$. This is actually quite trivial: $\m_{\phi(P)}$ is precisely those $(V, f)$ such that $f(\phi(P)) = 0$. Then $f \circ \phi$ vanishes on $P$ so $(\phi^{-1}[V], f \circ \phi) \in \m_P$.
+
+        \item The forward direction is obvious (see functoriality of the stalks) so suppose that $\phi$ is a morphism, a homeomorphism, and induces isomorphisms on the stalks. We just want to show that for all $f: U \longrightarrow k$ regular, $U \subseteq X$ open and nonempty, that $f \circ \phi^{-1}$ is regular. Take indeed $P \in U$. Then $(U, f) \in \mathcal O_{X, P}$. The map $\mathcal O_{\phi(P), Y} \longrightarrow \mathcal O_{P, X}$ is an isomorphism by assumption. In particular $(U, f)$ is in the image, so there is some $(V, g) \mapsto (U, f)$. Then (suppressing restrictions), $g \circ \phi = f$ so $f \circ \phi^{-1} = g$. Thus, $f \circ \phi^{-1}$is regular on a neighborhood of $P$. Hence, $f \circ \phi^{-1}$ is regular and $\phi^{-1}$ is a morphism and $\phi$ is an isomorphsm.
+    \end{enumerate}
 \end{proof}
