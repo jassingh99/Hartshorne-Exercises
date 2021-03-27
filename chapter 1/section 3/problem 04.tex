@@ -1,7 +1,22 @@
-\label{1.3.4}
+\label{1.3.4}                                                                            
 
 Show that the $d$-uple embedding of $\P^n$ (\ref{1.2.12}) is an isomorphism onto its image.
 
 \begin{proof}
+    In the proof of \ref{1.2.12}.b, we defined an inverse $\psi$ to the $d$-uple embedding $\rho_d$. This took some point $[\{a_J\}] \mapsto [a_{I_0} : \cdots : a_{I_n}]$, with the notation as described above. Point being, this map is defined by a bunch of homogeneous polynomials of the same degree, in this case $y_{I_0}, \dots, y_{I_n}$. The $d-$uple embedding is the same sort of thing - homogeneous coordinate is defined by a homogeneous polynomial and each one has the same degree $d$. Since we already know these maps are inverse, we need only check that they are morphisms of varieties. To do so, we appeal to the following general lemma.
 
+    \begin{lemma}
+        Let $f_1, \dots, f_m \in k[x_0, \dots, x_n]$ be nonzero homogeneous polynomials of the same degree. Then if $Y \subseteq \P^n$ is a variety such that $Z(f_0, \dots, f_m) \cap Y = \emptyset$, the map $\phi: Y \longrightarrow \P^m$ via $P \mapsto [f_0(P) : \cdots : f_m(P)]$ is a morphism of varieties.
+    \end{lemma}
+    \begin{proof}
+        First of all, this map is well defined on $Y$ because we chose it not to vanish there, and we insisted that all $f_i$ are homogeneous of the same degree.
+
+        Now, we want to show that $\phi$ induces a map $\phi^*: \mathcal O_{\P^m} \longrightarrow \phi_* \mathcal O_Y$. Indeed, let $\emptyset \neq V \subseteq \P^m$ be open and let $f: V \longrightarrow k$ look like $\frac{g}{h}$ on some $\emptyset \neq W \subseteq V$ with $g, h \in k[x_0, \dots, x_m]$ homogeneous polynomials of the same degree such that $Z(h) \cap V = \emptyset$. Then $\emptyset \neq \phi^{-1}[W] \subseteq \phi^{-1}[V]$ and on $\phi^{-1}[W]$ we have $f \circ \phi = \frac{g}{h} \circ \phi$. This evaluates as
+        \[
+            P \mapsto [f_0(P) : \cdots : f_m(P)] \mapsto \frac{g([f_0(P) : \cdots : f_m(P)])}{h([f_0(P) : \cdots : f_m(P)])}.
+        \]
+        So we have $\frac{g}{h} \circ \phi = \frac{g(f_0, \dots, f_m)}{h(f_0, \dots, f_m)}$. As each $f_i$ has the same degree, this is a quotient of same degree homogeneous polynomials in $k[x_0, \dots, x_n]$. Thus, $f \circ \phi$ is regular and $\phi$ induces a morphism on these sheaves, and is hence a morphism of varieties $Y \longrightarrow \P^m$.
+    \end{proof}
+
+    The only additional condition we have to check for the lemma to apply is that the coordinate functions of $\rho_d$ and $\psi$ vanish nowhere on $\P^n$ and $\im \rho_d$ respectively. Really this should have been checked in \ref{1.2.12} for these maps to even make sense, but it's clear enough. Indeed, for $\rho_d$, its components are the monomial of degree $d$, and $Z(x_0^d, \dots, x_n^d) = \emptyset$. On the other hand, recall that the definition of $\psi$ was independent of the choice of tuple $I$. As $I$ ranges over all tuples with $\sum I = d - 1$, $[a_{I_0} : \cdots a_{I_n}]$ will eventually contain each $a_J$, $\sum J = d$. As one of these components must be nonzero, the components of $\psi$ cannot vanish on $\im \rho_d$. Hence, the lemma tells us that $\rho_d$ and $\psi$ are morphisms of varieties, and we know that they are inverse already. Hence, $\rho_d: \P^n \longrightarrow \im \rho_d$ is an isomorphism of varieties.
 \end{proof}

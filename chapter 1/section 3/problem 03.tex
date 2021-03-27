@@ -15,5 +15,28 @@
         We furthermore want to show that this is a morphism of \emph{local} rings. That is, $\m_{\phi(P)} \mapsto \m_P$. This is actually quite trivial: $\m_{\phi(P)}$ is precisely those $(V, f)$ such that $f(\phi(P)) = 0$. Then $f \circ \phi$ vanishes on $P$ so $(\phi^{-1}[V], f \circ \phi) \in \m_P$.
 
         \item The forward direction is obvious (see functoriality of the stalks) so suppose that $\phi$ is a morphism, a homeomorphism, and induces isomorphisms on the stalks. We just want to show that for all $f: U \longrightarrow k$ regular, $U \subseteq X$ open and nonempty, that $f \circ \phi^{-1}$ is regular. Take indeed $P \in U$. Then $(U, f) \in \mathcal O_{X, P}$. The map $\mathcal O_{\phi(P), Y} \longrightarrow \mathcal O_{P, X}$ is an isomorphism by assumption. In particular $(U, f)$ is in the image, so there is some $(V, g) \mapsto (U, f)$. Then (suppressing restrictions), $g \circ \phi = f$ so $f \circ \phi^{-1} = g$. Thus, $f \circ \phi^{-1}$is regular on a neighborhood of $P$. Hence, $f \circ \phi^{-1}$ is regular and $\phi^{-1}$ is a morphism and $\phi$ is an isomorphsm.
+
+        \item Note first that if we have a commutative diagram
+        $$
+        \begin{tikzcd}
+            X \arrow[r, "\phi"] & Y \arrow[r, "\alpha", swap, shift right] \arrow[r, "\beta", shift left] & k
+        \end{tikzcd}
+        $$
+        then $\beta = \alpha$. Indeed, $\beta - \alpha: Y \longrightarrow k$ is regular and its zero set is closed and contains $\phi[X]$, which is dense. Thus, $\alpha - \beta = 0$. Warning - density is not enough, as maps with dense images are not in general epimorphisms in $\mathbf{Top}$!
+
+        Now, take the map $\phi_P^*: \mathcal O_{Y, \phi(P)} \longrightarrow \mathcal O_{X, P}$ and suppose $(V, f) \mapsto 0$. By definition, $(V, f) \mapsto (\phi^{-1}[V], f \circ \phi)$. Then we must have some $\emptyset \neq W \subseteq \phi^{-1}[V]$ such that $(f \circ \phi)|_W = 0$. Hence, we have the following commutative diagram.
+        \[
+            \begin{tikzcd}
+                \phi^{-1}[V] \arrow[r, "\phi"] & V \arrow[r, "f"] & k\\
+                W \arrow[u, hook] \arrow[rru, "0", swap]
+            \end{tikzcd}
+        \]
+        We claim that the restriction $\phi: W \longrightarrow V$ also has dense image. Indeed, let $\emptyset \neq O \subseteq V$ be open. Then $\emptyset \neq \phi^{-1}[O] \subseteq \phi^{-1}[V]$ is open. It is therefore open in $X$, which is assumed to be irreducible, and is hence dense. Then $W \cap \phi^{-1}[O] \neq \emptyset$ an $\phi[W] \cap O \neq \emptyset$. We have the following commutative diagram.
+        \[
+            \begin{tikzcd}
+                W \arrow[r, "\phi"] & V \arrow[r, "0", swap, shift right] \arrow[r, "f", shift left] & k
+            \end{tikzcd}
+        \]
+        so as $W \longrightarrow V$ is dominant, the explanation above tells us that $f = 0$ on $V$. Thus, the kernel of $\phi_P^*$ is trivial.
     \end{enumerate}
 \end{proof}

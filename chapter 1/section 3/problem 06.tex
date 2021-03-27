@@ -3,5 +3,18 @@
 There are quasi-affine varieties which are not affine. For example, show that $X = \A^2 - 0$ is not affine. [\emph{Hint}: Show that $\mathcal O(X) \cong k[x, y]$ and use \ref{1.3.5}. See \ref{3.4.3} for another proof.]
 
 \begin{proof}
+    Note: I used Gathmann's notes for the idea to look at the ideal of denominators of a regular functions (see: \href{http://www.mathematik.uni-kl.de/~gathmann/class/alggeom-2002/alggeom-2002.pdf}{here}).
 
+    Observe first that $X = D(x) \cup D(y)$. Then $\mathcal O(X) = \mathcal O(D(x)) \cap \mathcal O(D(y))$, where the intersection takes place in $k(X) = k(x, y)$. We seek then to compute the ring of regular functions of one of these basic open sets.
+
+    \begin{lemma}
+        Let $X$ be an affine variety. Then $\mathcal O(D(f) \cap X) = \mathcal O(X)_f$.
+    \end{lemma}
+    \begin{proof}
+        First of all, we have an inclusion $\mathcal O(X)_f \longrightarrow \mathcal O(D(f) \cap X)$, interpreted in the function field $k(X)$. Conversely, take some $\alpha \in \mathcal O(D(f) \cap X)$. As mentioned above, we will use the ideal of denominators of $\alpha$. Indeed, let $I = \{g \in \mathcal O(X) : g\alpha \in \mathcal O(X)\}$. In other words $g \in I$ iff $\alpha = \frac{h}{g}$ for some $h \in \mathcal O(X)$. We want to show that some power $f^n \in I$. In other words, that $f \in \sqrt{I}$.
+
+        Now, if we have $X \subseteq \A^n$ defined as $V(\p)$ we'd like to pull back to $k[x_1, \dots, x_n]$ to apply the Nullstellensatz. Indeed, $I$ pulls back to $I + \p$. We then want to show that (a representative of) $f$ vanishes on $V(I + \p)$. Equivalently, that $D(f) \subseteq D(I + \p)$. Indeed, let $P \in D(f)$ and write $f = \frac{g}{h}$ on a neighborhood of $P$ in $\A^n$. Then $h(P) \neq 0$ and any representative of $h$ is in $\p + I$. Thus, $p \in D(I + \p)$. We therefore have $J(V(f)) \subseteq J(V(I + \p)) = \sqrt{I + \p}$. Thus, $f \in \sqrt{I}$, i.e. some power of $f$ appears as a denominator of $\alpha$. Hence, $\alpha \in \mathcal O(X)_f$ as desired.
+    \end{proof}
+
+    Hence, we have $\mathcal O(X) = k[x, y]_x \cap k[x, y]_y \subseteq k(x, y)$. Take some $\frac{f}{x^n} = \frac{g}{x^m}$ in the intersection. Then $y^m f = x^n g$, so $y^m \mid g$ and $x^n \mid d$. Hence, $\frac{f}{x^n} = \frac{g}{y^m} \in k[x, y]$ and indeed, $\mathcal O(X) = k[x, y]$.
 \end{proof}

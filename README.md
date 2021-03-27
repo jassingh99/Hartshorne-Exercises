@@ -15,4 +15,6 @@ Solved: 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17
 Incomplete: 9
 
 ## Section 3. Morphisms
-Incomplete: 1, 3
+Solved: 1, 2, 3, 4, 5, 6, 7
+
+Incomplete: 9

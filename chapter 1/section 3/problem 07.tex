@@ -7,5 +7,9 @@
 \end{enumerate}
 
 \begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item Take indeed two curves $Z(f)$ and $Z(g)$, where $f, g$ are irreducible homogeneous polynomials. Then their intersection is $Z(f, g)$. By \ref{1.2.17}.a, the dimension of $Z(f, g) \geq 0$. Hence, it is nonempty. If this argument is a bit scary (which, to me, it is) we can unpack it. All we're really doing is saying that, by Krull's principal ideal theorem (which works well for homogeneous primes by \ref{1.2.17}), $\codim (f, g) \leq 2$. Thus, the inclusion $(f, g) \subseteq (x, y, z)$ is strict. As $(x, y, z)$ is the irrelevant ideal, the correspondence tells us that $(f, g)$ defines a nonempty $Z(f, g)$, as only the unit ideal can define the empty variety.
 
+        \item The hint really gives us the whole idea. Suppose indeed that $Y \cap H =\emptyset$ and consider then $\P^n - H$. By \ref{1.3.5}, this is an affine variety. Furthermore, we have $Y \subseteq \P^n - H$. Then $Y$ is an irreducible closed subset of an affine variety and is, therefore, itself an affine variety. By \ref{1.3.1}.e, it must therefore be a point, i.e. $\dim Y = 0$. Thus, if $\dim Y \geq 1$ we must have $Y \cap H \neq \emptyset$.
+    \end{enumerate}
 \end{proof}

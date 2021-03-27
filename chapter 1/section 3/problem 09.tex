@@ -3,5 +3,14 @@
 The homogeneous coordinate ring is not an invariant under isomorphism. For example, let $X = \P^1$ an let $Y$ be the $2$-uple embedding of $\P^1$ in $\P^2$. Then $X \cong Y$ (\ref{1.3.4}). But show that $S(X) \not \cong S(Y)$.
 
 \begin{proof}
+    As explained in \ref{1.3.1}.c, $Y = Z(z^2 - xy)$. Then $S(Y) = k[x, y, z] / (z^2 - xy)$, which we claim is not isomorphic to $S(X) = k[x, y]$. First of all, the given map $S(Y) \longrightarrow S(X)$ via $x \mapstp x^2$, $y \mapsto y^2$, $z \mapsto xy$ is not as isomorphism, as its image is $k[x^2, xy, y^2] < k[x, y]$. But the question was not that this specific map is not an isomorphism, it is that no isomorphism at all can exist. First, consider the plot of $V(z^2 - xy) \subseteq \A^3$ below (figure \ref{fig1.3.2}).
 
+    \begin{figure}[h]
+        \centering
+        \includegraphics[scale=0.75]{double-cone}
+        \caption{$V(z^2 - xy) \subseteq \A^3$}
+        \label{fig1.3.2}
+    \end{figure}
+
+    There seems to be an issue at the origin. Again, this is a plot in $\R^3$ but we're only using it for ideas. As such, let's compute the localization of $S(Y)$ at the maximal ideal $(x, y, z)$.
 \end{proof}

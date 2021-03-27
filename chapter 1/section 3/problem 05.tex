@@ -1,7 +1,11 @@
 \label{1.3.5}
 
-By abuse of language, we will say that a variety ``is affine" if it is isomorphic to an affine variety. If $H \subseteq \P^n$ is any hypersurface, show that $\P^n - H$ is affine. [\emph{Hint}: Let $H$ have degree $d$. Then consider the $d$-uple embedding of $\P^n$ in $\P^N$ and use the fact that $\P^N$ minus a hyperplace is affine.]
+By abuse of language, we will say that a variety ``is affine" if it is isomorphic to an affine variety. If $H \subseteq \P^n$ is any hypersurface, show that $\P^n - H$ is affine. [\emph{Hint}: Let $H$ have degree $d$. Then consider the $d$-uple embedding of $\P^n$ in $\P^N$ and use the fact that $\P^N$ minus a hyperplane is affine.]
 
 \begin{proof}
+    Let $H = Z(f)$ for some irreducible homogeneous polynomial $f \in k[x_0, dots, x_n]$. Let $d = \deg f$. Then by \ref{1.3.4}, the map $\rho_d: \P^n \longrightarrow \P^N$ is an isomorphism onto its image $Y$. We write $f = \sum a_I x^I$ ranging over multi-indices $I$ with $\sum I = d$. Let $\overline{f} = \sum a_I y_I$, where $y_I$ are the coordinates on $\P^N$, indexed by those same multi-indices. The $d$-uple embedding is defined then by $y_I \mapsto x^I$. We claim that, for $P \in \P^n$, that $f(P) = 0$ iff $\overline{f}(\rho_d(P)) = 0$. Indeed, $f(P) = 0$ means that $\sum a_I P^I = 0$ and $\rho_d(P) = [\{P^I\}]$, so $\sum a_I P^I = \overline{f}(\rho_d(P))$.
 
+    This tells us that $\rho_d$ descends to a map $\P^n - H \longrightarrow Y - Z(\overline{f})$. As $\overline{f}$ is linear and irreducible, $Z(\overline{f})$ is a hypersurface in $\P^N$. We must, strictly speaking, show that this map is still a map of varieties, but we will defer this until \ref{1.3.10} which handles this in greater generality. Using this, we therefore conclude that $\P^n - H \cong Y - Z(\overline{f})$, which is $\P^n$ minus a hyperplane.
+
+    It remains to show that $\P^n$ minus a hyperplane is affine. Indeed, take $Z \subseteq \P^n$ a hyperplane. Let $T: \A^{n + 1} \longrightarrow \A^{n + 1}$ be a linear isomorphism sending $Z$ to $V(x_0)$. Then quotienting to $\P^n$ yields a linear automorphism $\P^n \longrightarrow \P^n$ sending $Z \mapsto Z(x_0)$. We know that $\P^n - Z(x_0) = U_0$ is affine by the usual map $\phi_0: U_0 \longrightarrow \A^n$.
 \end{proof}

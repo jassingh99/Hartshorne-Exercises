@@ -35,5 +35,26 @@
         $$
 
         Which would imply that $\mathcal O(U)^\times = k^\times$. But as $V(f) \cap U = \emptyset$, $f \in \mathcal O(U)^\times$. Furthermore, $f$ was assumed to be nonconstant, so this is a contradiction.
+
+        \item We're going to cheat a bit here and piggy back off of the part of \ref{1.1.1} I didn't check, namely the change of coordinates. I gave references for the case of even and odd/zero characteristic there. Taking this for granted, the result is there is a change of coordinates $x \mapsto a_1 X + a_2 Y + a_3$ and $y \mapsto b_1 X + b_2 Y + b_3$ representing an isomorphism $k[x, y] \longrightarrow k[X, Y]$ such that an irreducible quadratic $f(x, y)$ becomes $XY - 1$ or $Y - X^2$. This gives us an automorphism $\A^2 \longrightarrow \A^2$ which sends the conic $V(f)$ to either $V(XY - 1)$ or $V(Y - X^2)$. These two homogenize to essentially the same polynomial, so the hope is that we can homogenize this to get our desired automorphism of $\P^2$.
+
+        Now take a conic $Z(f) \subseteq \P^2$ be a conic, so that $f(x, y, z)$ is an irreducible homogeneous quadratic. Assume without loss of generality that $U_z \cap Z(f) \neq \emptyset$, where $U_z = \P^2 - Z(z)$ is the usual affine patch. Hence, $z \nmid f$ so some term of $f$ contains no $z$. This means that $\alpha_z$ doesn't collapse the information of $f$. More formally, it means that $\alpha_z(f)$ has degree two, as the term without a $z$ is unchanged. Thus, $\beta_z(\alpha_z(f)) = f$. This tells us that we can faithfully attempt to work in $U_z$. Indeed, consider the above change of coordinates $k[x, y] \longrightarrow k[X, Y]$. Then this sens $\alpha_z(f)(x, y)$ to one of these special conics $XY - 1$ or $Y - X^2$. We'll homogenize this coordinate change as follows.
+        $$
+        \begin{align*}
+            x &\mapsto a_1 X + a_2 Y + a_3 Z\\
+            y &\mapsto b_1 X + b_2 Y + b_3 Z\\
+            z &\mapsto Z.
+        \end{align*}
+        $$
+        
+        This yields an isomorphism $k[x, y, z] \longrightarrow k[X, Y, Z]$ and hence a linear automorphism $\P^2 \longrightarrow \P^2$. This sends $Z(f(x, y, z))$ to $Z(f(X, Y, Z))$. Furthermore, we can see plainly by the definition of these coordinates that $\alpha_z(f)(X, Y) = \alpha_Z(f(X, Y, Z))$. Hence, $\alpha_Z(f(X, Y, Z)) = XY - 1$ or $Y - X^2$. By the above discussion, we can apply $\beta_Z$ to recover $f((X, Y, Z)$. Indeed, this tells us that $f(X, Y, Z) = XY - Z^2$ or $YZ - X^2$. These, of course, define the same variety. Hence, all conics in $\P^2$ are isomorphic.
+
+        Of course, we still need to show that these conics are isomorphic to $\P^1$ itself. We'll defer part of this proof until \ref{1.3.4}, which shows that the $d$-uple embedding is an isomorphism onto its image. By \ref{1.2.12} of the last section, we know the ideal of the image is the kernel of the map $k[y_0, y_1, y_2] \longrightarrow k[x_0, x_1]$ sending $y_0 \mapsto x_0^2$, $y_1 \mapsto x_0 x_1$, and $y_2 \mapsto x_1^2$. Letting $\a$ be the kernel, we want to show that the inclusion $(xy - z^2) \subseteq \a$ is an equality. This should proceed as in \ref{1.2.15}, i.e. we'll show they have the same codimension. Equivalently, that $\codim \a = 1$. Hence, we just want to show that the image $k[x_0^2, x_0 x_1, x_1^2]$ is two dimensional. Indeed, it's obvious enough that $x_0^2$ and $x_1^2$ are algebraically independent. Furthermore, $x_0 x_1$ satisfies $t^2 - x_0^2 x_1^2$ and is hence integral over the other two. Thus, the dimension is indeed two, so $\codim \a = 3 - 2 = 1$ and we have equality. Thus, the image of the $2$-uple embedding $\P^1 \longrightarrow \P^2$ is an isomorphism onto $Z(xy - z^2)$. Thus, all conics are indeed isomorphic to $\P^1$.
+
+        Sidenote: it'd be interesting to prove that all plane conics are isomorphic using methos from projective geometry itself, rather than this incidental change of coordinates. Perhaps we can consider the Veronese surface, i.e. the image of $\P^2 \longrightarrow \P^5$ under the $2$-uple embedding. A conic takes the form $a x^2 + b xy + c xz + d y^2 + e yz + f y^2$, which corresponds exactly to the point $[a : b : c : d : e : f] \in \P^5$. This idea of ``straightening out" the variety to get a linear variety via the $d$-uple embedding is explored more in \ref{1.3.5}.
+
+        \item Recall that a curve in $X$ is a one dimensional irreducible closed subset of $X$. This is a purely topological notion, so properties thereof are invariant under homeomorphism. We see here the topological distinction between the affine and projective plane. In $\A^2$ we can find disjoint curves, but in $\P^2$ we cannot. For $\A^2$ simply consider the lines $V(x)$ and $V(x - 1)$, whose intersection is of course $V(x, x - 1) = V(1) = \emptyset$. However, as we shall see in \ref{1.3.7}.a, all curves in $\P^2$ intersect. Thus, these two spaces cannot be homeomorphic.
+
+        \item Let $X$ be an affine variety that is isomorphic to a projective variety $Y$. Then $\mathcal O(X) \cong \mathcal O(Y) \cong k$. Of course, know the regular functions on a point: $\mathcal O(\{*\}) = k$. Hence, $A(X) \cong A(\{*\})$ so $A \cong \{*\}$.
     \end{enumerate}
 \end{proof}

@@ -20,8 +20,6 @@ $N = 2$, and the image $Y$ of the 2-uple embedding of $\P^1$ in $\P^2$ is a coni
 
         \item For the easier inclusion, take some $\rho_d([a_0 : \dots : a_n]) = [M_0(a) : \dots : M_N(a)]$ and let $f \in Z(\a)^h$. Then $f(M_0(a), \dots, M_N(a)) = \theta(f)(a) = 0$ so $\im \rho_d \subseteq Z(\a)$. 
 
-        For the converse JustDoIt or possibly seek \href{https://www.mathreference.com/ag-pv,duple.html}{this reference} if I resign.
-
         We will define an inverse map $\psi: Z(\a) \longrightarrow \P^n$. For a multi-index $I$ we will define $I_j = (i_0, \dots, i_j + 1, \dots, i_n)$. If we take $\sum I = d - 1$ then we will define a map $\psi_I: Z(\a) \longrightarrow \P^n$ via $[\{a_J\}] \mapsto [a_{I_0} : \dots : a_{I_n}]$. Essentially, we are extracting $n + 1$ coordinates from $[\{a_J\}]$, starting from $I_0$ and proceeding in lexicographic order. Essentially, we seek to show that this, with all the relations of $\a$, are all we need to recover $[\curly{a_I}]$.
 
         First, we will show that $\psi_I$ is independent of the choice of $I$. Indeed, take another multi-index $K$ with $\sum K = d - 1$. Then to compare $\psi_I([\curly{a_J}])$ and $\psi_K([\curly{a_J}])$ we need to compare the ratios $\frac{a_{I_j}}{a_{K_j}}$. They define the same point in projective space iff all these ratios are the same (ignoring division by $0$). Observe that $I_j + K_0 = I_0 + K_j$, so $\a$ contains the polynomial $y_{I_j} y_{K_0} - y_{I_0} y_{K_j}$. As we are defining our $\psi$ on $Z(\a)$, we therefore have $a_{I_j} a_{K_0} = a_{I_0} a_{K_j}$, i.e. that $\frac{a_{I_j}}{a_{K_j}} = \frac{a_{I_0}}{a_{K_0}}$ for all $J$. Hence, $\psi_I = \psi_K$ so we can simply call it $\psi$.
@@ -32,7 +30,7 @@ $N = 2$, and the image $Y$ of the 2-uple embedding of $\P^1$ in $\P^2$ is a coni
 
         We have therefore proven that these two maps are inverse. In fact, we could have done this for just $Z(\curly{\prod y_{K_i} - \prod y_{J_i} : \sum K_i = \sum J_i})$, so these generate $\a$. If we try hard enough we may even show that we only need the degree two examples, but whatever.
 
-        \item We'd expect that $\rho_d^{-1}[Z(I)] = Z(\theta[I])$ and that $\rho_d[Z(J)] = Z(\theta^{-1}[J^d])$, where by $J^d$ I mean to take your favorite homogeneous generators $J = (S)$ and let $S^d$ be raising everthing in $S$ to the $d^{th}$ power so that it is in the image of $\theta$. It seems pretty believable that $\psi$ and $\rho_d$ are continuous though, as they're all just evaluation at a bunch of homogeneous polynomials of the same degree so they better be continuous.
+        \item We'd expect that $\rho_d^{-1}[Z(I)] = Z(\theta[I])$ and that $\rho_d[Z(J)] = Z(\theta^{-1}[J^d])$, where by $J^d$ I mean to take your favorite homogeneous generators $J = (S)$ and let $S^d$ be raising everthing in $S$ to the $d^{th}$ power so that it is in the image of $\theta$. It seems pretty believable that $\psi$ and $\rho_d$ are continuous though, as they're all just evaluation at a bunch of homogeneous polynomials of the same degree so they better be continuous. In fact, see \ref{1.3.4} to see that they are morphisms of varieties, hence continuous. No need to worry about circularity, we never used continuity in the proof of \ref{1.3.4}, only that these were inverse.
 
         \item We did this is \ref{1.2.9} already.
     \end{enumerate}
