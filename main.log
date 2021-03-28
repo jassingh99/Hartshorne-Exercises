@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2020.12.4)  26 MAR 2021 23:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (MiKTeX 21.1) (preloaded format=pdflatex 2020.12.4)  28 MAR 2021 15:06
 entering extended mode
 **./main.tex
 (main.tex
@@ -1404,10 +1404,13 @@ File: ./images/double-cone.png Graphic file (type png)
 <use ./images/double-cone.png>
 Package pdftex.def Info: ./images/double-cone.png  used on input line 10.
 (pdftex.def)             Requested size: 272.14105pt x 248.99211pt.
-) ("chapter 1/section 3/problem 10.tex" [37 <./images/double-cone.png (PNG copy
-)>]) ("chapter 1/section 3/problem 11.tex") ("chapter 1/section 3/problem 12.te
-x") ("chapter 1/section 3/problem 13.tex") ("chapter 1/section 3/problem 14.tex
-"
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+[37]) ("chapter 1/section 3/problem 10.tex")
+("chapter 1/section 3/problem 11.tex") ("chapter 1/section 3/problem 12.tex"
+[38 <./images/double-cone.png (PNG copy)>]) ("chapter 1/section 3/problem 13.te
+x") ("chapter 1/section 3/problem 14.tex"
 ! Undefined control sequence.
 l.10     \item Let $Y \susbeteq
                                 \P^3$ be the twisted cubic curve which is th...
@@ -1417,10 +1420,10 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-) ("chapter 1/section 3/problem 15.tex" [38])
+) ("chapter 1/section 3/problem 15.tex" [39])
 ("chapter 1/section 3/problem 16.tex") ("chapter 1/section 3/problem 17.tex"
 
-LaTeX Warning: Reference `2.6.4' on page 39 undefined on input line 10.
+LaTeX Warning: Reference `2.6.4' on page 40 undefined on input line 10.
 
 ! Undefined control sequence.
 <recently read> \phu 
@@ -1433,11 +1436,11 @@ misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-[39]) ("chapter 1/section 3/problem 18.tex"
+) ("chapter 1/section 3/problem 18.tex"
 
 LaTeX Warning: Reference `3.5.6' on page 40 undefined on input line 10.
 
-) ("chapter 1/section 3/problem 19.tex"
+[40]) ("chapter 1/section 3/problem 19.tex"
 ! Extra }, or forgotten $.
 l.5 ...x_n$. Let $J = \det \pipe{\diff{f_i}{x_j}}}
                                                   $ be the Jacobian polynomi...
@@ -1449,9 +1452,9 @@ deleted material, e.g., by typing `I$}'.
 
 ) ("chapter 1/section 3/problem 20.tex"
 
-LaTeX Warning: Reference `3.3.5' on page 40 undefined on input line 8.
+LaTeX Warning: Reference `3.3.5' on page 41 undefined on input line 8.
 
-) ("chapter 1/section 3/problem 21.tex" [40]) [41]
+) ("chapter 1/section 3/problem 21.tex" [41]) [42]
 Overfull \hbox (16.44904pt too wide) in paragraph at lines 196--196
 []\OT1/cmr/m/n/12 David A. Cox, John B. Little, and Donal O'Shea. \OT1/cmr/m/it
 /12 Ideals, varieties, and algorithms:
@@ -1463,7 +1466,7 @@ Overfull \hbox (7.63402pt too wide) in paragraph at lines 196--196
 T1/cmr/m/n/12 . [][]$\OT1/cmtt/m/n/12 https : / / stacks . math . columbia .
  []
 
-[42]
+[43]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 197.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 197.
  (main.aux)
@@ -1481,8 +1484,8 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 197.
  ) 
 Here is how much of TeX's memory you used:
- 29236 strings out of 482725
- 561942 string characters out of 2949046
+ 29237 strings out of 482725
+ 561949 string characters out of 2949046
  1189397 words of memory out of 3000000
  44069 multiletter control sequences out of 15000+200000
  544866 words of font info for 74 fonts, out of 3000000 for 9000
@@ -1509,9 +1512,9 @@ nts/cm/cmti12.pfb></home/jas/.miktex/texmfs/install/fonts/type1/public/amsfonts
 ler/eufm10.pfb></home/jas/.miktex/texmfs/install/fonts/type1/public/amsfonts/sy
 mbols/msbm10.pfb></home/jas/.miktex/texmfs/install/fonts/type1/public/old-arrow
 s/oasy10.pfb>
-Output written on main.pdf (42 pages, 633333 bytes).
+Output written on main.pdf (43 pages, 641221 bytes).
 PDF statistics:
- 660 PDF objects out of 1000 (max. 8388607)
- 260 named destinations out of 1000 (max. 500000)
+ 665 PDF objects out of 1000 (max. 8388607)
+ 261 named destinations out of 1000 (max. 500000)
  75 words of extra memory for PDF output out of 10000 (max. 10000000)
 
