@@ -6,8 +6,17 @@ A subset of a topological space is \emph{locally closed} if it is an open subset
 
 If $X$ is a quasi-affine or quasi-projective variety and $Y$ is an irreducible locally closed subset, then $Y$ is also quasi-affine (respectively, quasi-projective) variety, by virtue of being a locally closed subset of the same affine of projective space. We call this the \emph{induced structure} on $Y$, and we call $Y$ a \emph{subvariety} of $X$.
 
-Now let $\phi: X \longrightarrow Y$ be a morphism and let $X' \subseteq X$ and $Y' \subseteq Y$ be irreducible locally closed subsets such that $\phi[X'] = Y'$. Show that $\phi|_{X'}: X' \longrightarrow Y'$ is a morphism.
+Now let $\phi: X \longrightarrow Y$ be a morphism and let $X' \subseteq X$ and $Y' \subseteq Y$ be irreducible locally closed subsets such that $\phi[X'] \subseteq Y'$. Show that $\phi|_{X'}: X' \longrightarrow Y'$ is a morphism.
 
 \begin{proof}
+    We have to show that $\phi|_{X'}$ induces a map on sheaves $\phi^*: \mathcal O_{Y'} \longrightarrow \phi_* \mathcal O_{X'}$. Indeed, take some $(U, f)$, $\emptyset \neq U \subseteq Y'$ open and $f$ regular on $U$. We want to show that $\phi^*(f) = f \circ \phi$ is regular. Now we can write $U = V \cap Y'$ for $V \subseteq Y$ open. It'd be pretty nice if we could extend $f$ to $V$, as then we can use the fact that $\phi: X \longrightarrow Y$ is regular. This may be asking too much, but we still have the following lemma.
 
+    \begin{lemma}
+        Let $Y' \subseteq Y$ be a subvariety and $P \in Y'$. Then the restriction map $\mathcal O_{Y, P} \longrightarrow \mathcal O_{Y', P}$ on local rings is onto.
+    \end{lemma}
+    \begin{proof}
+        Take indeed some $(U, f) \in \mathcal O_{Y', P}$. Some restriction to a neighborhood of $P$ will be the quotient of polynomials, so by relabeling assume without loss of generality that $f = \frac{g}{h}$ for some polynomials $g, h$ in the underlying polynomial ring of $Y$. The specifics will depend on if $Y$ is projective or affine, but this distinction isn't very important right now. Indeed, we can consider the open set $D(h) \cap Y$, which contains $P$. This is an open subset of $Y$, so $\parens{D(h) \cap Y, \frac{g}{h}} \in \mathcal O_{Y, P}$. The restriction of this to $\mathcal O_{Y', P}$ is $\parens{D(h) \cap Y', \frac{g}{h}}$, which equals $(U, f)$ in the local ring. Hence, we have found a preimage to $(U, f)$ and the restriction map is onto.
+    \end{proof}
+
+    Now let's return to our regular function $(U, f)$ on $Y'$. Take some $P \in U$. Then we can view $(U, f) \in \mathcal O_{Y', P}$. By the lemma, we can take some $(V, g) \in \mathcal O_{Y, P}$ which restricts to $(U, f)$. That is, $(V \cap Y', g|_{Y'}) = (U, f)$. As $\phi: X \longrightarrow Y$ is a map of varieties, we have $(\phi^{-1}[V], g \circ \phi)$ a regular function on anything in $\phi^{-1}[P]$. Thus, on some neighborhood of any of these points in $\phi^{-1}[P]$, $g \circ \phi$ is a quotient of polynomials on $X$. Then indeed, the restriction of any quotient of polynomials will remain regular so $g \circ \phi$ restricts to a regular function on $Y'$ at any point in $\phi^{-1}[P]$. Of course, as $g$ was a lift of $f$, $g \circ \phi$ is a lift of $f \circ \phi$. Thus, $f \circ \phi$ is regular on any point in $\phi^{-1}[P]$, hence it is regular on $\phi^{-1}[U]$. This therefore gives us our desired map of sheaves $\mathcal O_{Y'} \longrightarrow \phi_* \mathcal O_{X'}$.
 \end{proof}

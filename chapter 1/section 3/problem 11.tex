@@ -3,5 +3,9 @@
 Let $X$ be any variety and let $P \in X$. Show that there is a $1-1$ correspondence between the prime ideals of the local ring $\mathcal O_P$ and the closed subvarieties of $X$ containing $P$.
 
 \begin{proof}
+    Let's focus on the case that $X$ is a (quasi) affine variety. We'll try to eliminate the quasi. Indeed, if we had $Y_1, Y_2 \subseteq X$ irreucible closed subsets then $\overline{Y_1}, \overline{Y_2} \subseteq \overline{X}$ are irreducible closed subsets. Furthermore, if $\overline{Y_1} = \overline{Y_2}$ then $\overline{Y_1} \cap X = \overline{Y_2} \cap X$. These should hopefully be $Y_1, Y_2$ again idk ugh. If so, irreducible closed subsets of $X$ are in bijection to those in $\overline{X}$ so we can kill the quasi.
 
+    It's easy enough to do this in the affine variety case. Indeed, irreducible closed subsets of $X$ are in correspondence to prime ideals of $A(X)$. $P \in Y$ iff $I(Y) \subseteq \m_P$, and prime ideals in $A(X)_{\m_P}$ correspond exactly to prime ideals in $A(X)$ contained in $\m_P$. Hence, irreducible closed subsets containing $P$ do indeed correspond to primes in $A(X)_{\m_P} \cong \mathcal O_{X, P}$.
+
+    Now let's do the (quasi) projective part. We can hopefully eliminate the quasi as above. Then recall that closed subvarieties of $X$ correspond to homogeneous primes in $S(X)$ not equal to the irrelevant ideal. Hopefully the localization correspondence still works.
 \end{proof}
