@@ -8,4 +8,8 @@ Let $Y \subseteq X$ be a subvariety. Let $\mathcal O_{Y, X}$ be the set of equiv
     We claim that the unique maximal ideal of $\mathcal O_{Y, X}$ is $\m_{Y} := \curly{(U, f) \in \mathcal O_X : f|_{Y} = 0}$, in analogy to $\m_P$. This is, of course, the kernel of the map $\mathcal O_{Y, X} \longrightarrow \mathcal O_Y \subseteq k(Y)$ by restriction.
 
     idea: easy to see that you can invert away from $Y$ so it's local. the lifting stuff from \ref{1.3.10} should give that the residue field is appropriate. idk about the dimension. we can embed the quotient field in $k(X)$, which has trdeg $\dim X$ over $k$ and the residue field is $k(Y)$ which has trdeg $\dim Y$ over $k$. can we subtract these?
+
+    ok so $\mathcal O(X) \longrightarrow \mathcal O_{Y, X}$ via $f \mapsto (X, f)$. should be injective by density of opens, or because $(dom(f), f)$ is a representative of the equivalence class of $(U, f)$, where $dom(f)$ is the largest open subset $f$ is defined on. in any case, when $Y = \{P\}$ this is the inclusion $\mathcal O(X) \longrightarrow \mathcal O_P$, and when $Y = \{X\}$ this is the inclusion $\mathcal O(X) \longrightarrow k(X)$. so we'll analogously take (overloaded but if we're right it's ok) $\m_Y = \{f \in \mathcal O(X) : f|_Y = 0\}$. Is it then the case that $\mathcal O(X)_{\m_Y} = \mathcal O_{Y,X}$? we may have to be careful of affine vs projective, as for projective we really need a homogeneous localization.
+
+    concept: $\mathcal O_{Y,X} = \bigcup_{P \in Y} \mathcal O_P \subseteq k(X)$. also seems like $\m_Y = \bigcap_{P \in Y} \m_P$. can we use this to kill the projective and affine cases at the same time?
 \end{proof}

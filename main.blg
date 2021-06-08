@@ -1,19 +1,20 @@
 [0] Config.pm:304> INFO - This is Biber 2.14
 [0] Config.pm:307> INFO - Logfile is 'main.blg'
-[83] biber:322> INFO - === Tue Mar  9, 2021, 00:46:48
-[98] Biber.pm:415> INFO - Reading 'main.bcf'
-[179] Biber.pm:943> INFO - Found 4 citekeys in bib section 0
-[194] Biber.pm:4256> INFO - Processing section 0
-[195] Utils.pm:75> INFO - Globbing data source 'bob.bib'
-[196] Utils.pm:91> INFO - Globbed data source 'bob.bib' to bob.bib
-[208] Biber.pm:4455> INFO - Looking for bibtex format file 'bob.bib' for section 0
-[213] bibtex.pm:1653> INFO - LaTeX decoding ...
-[222] bibtex.pm:1471> INFO - Found BibTeX data source 'bob.bib'
-[272] Utils.pm:304> WARN - ISBN '978-0-387-35650-1 978-0-387-35651-8' in entry 'cox-ideals' is invalid - run biber with '--validate_datamodel' for details.
-[293] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[293] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[293] Biber.pm:4084> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
-[293] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
-[302] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
-[305] bbl.pm:755> INFO - Output to main.bbl
-[306] Biber.pm:128> INFO - WARNINGS: 1
+[79] biber:322> INFO - === Tue Apr 27, 2021, 21:29:06
+[93] Biber.pm:415> INFO - Reading 'main.bcf'
+[169] Biber.pm:943> INFO - Found 5 citekeys in bib section 0
+[183] Biber.pm:4256> INFO - Processing section 0
+[184] Utils.pm:75> INFO - Globbing data source 'bob.bib'
+[184] Utils.pm:91> INFO - Globbed data source 'bob.bib' to bob.bib
+[196] Biber.pm:4455> INFO - Looking for bibtex format file 'bob.bib' for section 0
+[197] bibtex.pm:1653> INFO - LaTeX decoding ...
+[207] bibtex.pm:1471> INFO - Found BibTeX data source 'bob.bib'
+[259] Utils.pm:304> WARN - ISBN '978-0-387-35650-1 978-0-387-35651-8' in entry 'cox-ideals' is invalid - run biber with '--validate_datamodel' for details.
+[269] Utils.pm:304> WARN - ISBN '9783540007067 9783642616983' in entry 'bourbaki-algebra2' is invalid - run biber with '--validate_datamodel' for details.
+[301] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[301] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[301] Biber.pm:4084> INFO - Sorting list 'ynt/global//global/global' of type 'entry' with template 'ynt' and locale 'en-US'
+[301] Biber.pm:4090> INFO - No sort tailoring available for locale 'en-US'
+[311] bbl.pm:652> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[313] bbl.pm:755> INFO - Output to main.bbl
+[313] Biber.pm:128> INFO - WARNINGS: 2

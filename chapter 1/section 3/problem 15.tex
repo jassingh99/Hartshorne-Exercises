@@ -15,5 +15,38 @@ Let $X \subseteq \A^n$ and $Y \subseteq \A^m$ be affine varieties.
 \end{enumerate}
 
 \begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item kinda hard $:/$
 
+        \item First, write $A(X) = k[x_1, \dots, x_n]/\p$ and $A(Y) = k[y_1, \dots, y_m]/\q$. Then by the Yoneda lemma, we can find natural isomorphisms
+        $$
+            A(X) \otimes_k A(Y) \cong \frac{k[x_1, \dots, x_n] \otimes_k k[y_1, \dots, y_m]}{(\p \otimes 1 + 1 \otimes \q)} \cong \frac{k[x_1, \dots, x_n, y_1, \dots, y_m]}{(\p + \q)}.
+        $$
+        We interpret $k[x_1, \dots, y_m]$ as the coordinate ring of $\A^n \times \A^m$, so to show $A(X \times Y) \cong A(X) \otimes_k A(Y)$ we need to show that $X \times Y = V(\p + \q)$. By the way, neither $\p$ nor $\q$ are ideals of $k[x_1, \dots, y_m]$ but we treat them as subsets via the inclusions $k[x_1, \dots, x_n], k[y_1, \dots, y_m] \subseteq k[x_1, \dots, y_m]$.
+
+        $``\subseteq"$ Let $(a, b) \in X \times Y$ and $f + g \in \p + q$. Then $(f + g)(a, b) = f(a, b) + g(a, b) = f(a) + g(b) = 0$ as $X = V(\p)$ and $Y = V(\q)$. Thus, $X \times Y \subseteq V(\p + \q)$.
+
+        $``\supseteq"$ Let $(a, b) \in V(\p + \q)$. Then for any $f \in \p$, $0 = f(a, b) = f(a)$ so $a \in V(\p) = X$. Similarly, $b \in Y$ so $(a, b) \in X \times Y$. Thus, $V(\p + \q) \subseteq X \times Y$.
+
+        Hence, we have shown $X \times Y = V(\p + \q)$ and as discussed, we therefore have $A(X \times Y) = A(X) \otimes_k A(Y)$. Additionally, by part (a) this is a domain. On the other hand, we can show part (a) without the given hint by showing the general fact of commutative algebra that the tensor prodict of finite type domains over an algebraically closed field is a domain.
+
+        \item This comes from part (b) and the following lemma.
+        \begin{lemma}
+            Let $A, B$ be finite type algebras over a field $k$ (not necessarily algebraically closed). Then $\dim A \otimes_k B = \dim A + \dim B$.
+        \end{lemma}
+        \begin{proof}
+            By N\"other's normalization lemma, we can find finite inclusions $k[x_1, \dots, x_a] \longrightarrow A$ and $k[y_1, \dots, y_b] \longrightarrow B$. Then $a = \dim A$ and $B = \dim B$. Furthermore, these together yield a finite map $k[x_1, \dots, x_a, y_1, \dots, y_b] \longrightarrow A \otimes_k B$, so $\dim A \otimes_k B = a + b = \dim A + \dim B$.
+        \end{proof}
+
+        \item Let $\mathsf{Var}$ denote the category of varieties and $\mathsf{dom}$ the category of finite type domains over $k$, which is a full subcategory of $\mathsf{Alg}$. We're suppressing the dependence of these categories on the underlying field $k$. We have the following natural isomorphisms via \cite[I.3.5]{hartshorne}:
+        $$
+        \begin{align*}
+            \mathsf{Var}(Z, X \times Y) &\cong \mathsf{dom}(A(X \times Y), \mathcal O(Z))\\
+            &\cong \mathsf{dom}(A(X) \otimes_k A(Y), \mathcal O(Z))\\
+            &\cong \mathsf{dom}(A(X), \mathcal O(Z)) \times \mathsf{dom}(A(Y), \mathcal O(Z))\\
+            &\cong \mathsf{Var}(Z, X) \times \mathsf{Var}(Z, Y).
+        \end{align*}
+        $$
+        Hence, $X \times Y$ is indeed a product in $\mathsf{Var}$.
+    \end{enumerate}
 \end{proof}

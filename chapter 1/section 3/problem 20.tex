@@ -9,5 +9,11 @@ Let $Y$ be a variety of dimension $\geq 2$, an let $P \in Y$ be a normal point. 
 \end{enumerate}
 
 \begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item I'm sorta stumped here. For an example, let's consider the cone $Y = V(z^2 - xy) \subseteq \A^3$. I plotted this above (\ref{fig1.3.2}). I expect that it isn't normal at the origin, which will probably come from the isomorphism $k[x, y, z]/(z^2 - xy) \longrightarrow k[s^2, st, t^2]$, which has normalization $k[s, t]$. We hope that the map $\mathcal O(Y) \longrightarrow \mathcal(Y - 0)$ is not onto. For instance, maybe we'd have $\sqrt{x}$ or something (corresponding to $s$ in $k[s^2, st, t^2] \subseteq k[s, t]$) defined on $Y - 0$ but not on $Y$?? In any case, how does this help me?
 
+        Concept: Does every normal point admit a neighborhood isomorphic to an open subset of affine space? I think the computation $\mathcal O(A^2 - 0) = k[x, y]$ in \ref{1.3.6} could generalize to higher affine spaces. Maybe that'll work?
+
+        \item Take $Y = \A^1$ and $P = 0$. Then the map $\mathcal O(Y) \longrightarrow \mathcal O(Y - 0)$ is given by $k[x] \longrightarrow k[x]_x$ which is not onto.
+    \end{enumerate}
 \end{proof}

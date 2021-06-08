@@ -53,6 +53,52 @@
       \verb https://books.google.com/books?id=Fm%5C_yPgZBucMC
       \endverb
     \endentry
+    \entry{bourbaki-algebra2}{book}{}
+      \name{author}{1}{}{%
+        {{hash=2192d83c2c342c54dd990b2acfba807d}{%
+           family={Bourbaki},
+           familyi={B\bibinitperiod},
+           given={Nicolas},
+           giveni={N\bibinitperiod}}}%
+      }
+      \list{language}{1}{%
+        {en}%
+      }
+      \list{location}{1}{%
+        {Berlin, Heidelberg}%
+      }
+      \list{publisher}{1}{%
+        {Springer Berlin Heidelberg}%
+      }
+      \strng{namehash}{2192d83c2c342c54dd990b2acfba807d}
+      \strng{fullhash}{2192d83c2c342c54dd990b2acfba807d}
+      \strng{bibnamehash}{2192d83c2c342c54dd990b2acfba807d}
+      \strng{authorbibnamehash}{2192d83c2c342c54dd990b2acfba807d}
+      \strng{authornamehash}{2192d83c2c342c54dd990b2acfba807d}
+      \strng{authorfullhash}{2192d83c2c342c54dd990b2acfba807d}
+      \field{labelalpha}{Algebra II}
+      \field{sortinit}{2}
+      \field{sortinithash}{ed39bb39cf854d5250e95b1c1f94f4ed}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{isbn}{9783540007067 9783642616983}
+      \field{shorthand}{Algebra II}
+      \field{title}{Algebra {II}}
+      \field{urlday}{28}
+      \field{urlmonth}{4}
+      \field{urlyear}{2021}
+      \field{year}{2003}
+      \field{urldateera}{ce}
+      \verb{doi}
+      \verb 10.1007/978-3-642-61698-3
+      \endverb
+      \verb{urlraw}
+      \verb http://link.springer.com/10.1007/978-3-642-61698-3
+      \endverb
+      \verb{url}
+      \verb http://link.springer.com/10.1007/978-3-642-61698-3
+      \endverb
+    \endentry
     \entry{cox-ideals}{book}{}
       \name{author}{3}{}{%
         {{hash=f491ad1431e56daa11842f8c7ad8aa73}{%
@@ -158,7 +204,7 @@
       \field{howpublished}{\url{https://stacks.math.columbia.edu}}
       \field{shorthand}{Stacks}
       \field{title}{\textit{Stacks Project}}
-      \field{year}{2020}
+      \field{year}{2021}
     \endentry
   \enddatalist
 \endrefsection

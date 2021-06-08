@@ -2,7 +2,7 @@
 
 \emph{Products of Quasi-Projective Varieties}
 
-Use the Segre embedding \ref{1.2.14} to identify $\P^n \times \P^m$ with its image and hence give it a structure of a projective variety. Now for any teo quasi-projective varieties $X \subseteq \P^n$ and $Y \subseteq \P^m$, consider $X \times Y \subseteq \P^n \times \P^m$
+Use the Segre embedding \ref{1.2.14} to identify $\P^n \times \P^m$ with its image and hence give it a structure of a projective variety. Now for any two quasi-projective varieties $X \subseteq \P^n$ and $Y \subseteq \P^m$, consider $X \times Y \subseteq \P^n \times \P^m$
 
 \begin{enumerate}[label = (\alph*)]
     \item Show that $X \times Y$ is a quasi-projective variety.
@@ -13,5 +13,61 @@ Use the Segre embedding \ref{1.2.14} to identify $\P^n \times \P^m$ with its ima
 \end{enumerate}
 
 \begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item In the course of proving (b), we will show that if $X, Y \subseteq \P^n, \P^m$ are closed subsets (not necessarily irreducible) then their product $X \times Y \subseteq \P^n \times \P^m$ is a closed subset, i.e. $\psi[X \times Y] \subseteq \psi[\P^n \times \P^m]$ is closed. This, combined with the actual statement of (b), will let us solve this problem.
 
+        Indeed, as $X, Y$ are quasiprojective take some projective varieties $X', Y' \subseteq \P^n, \P^m$. Then by part (b), $X' \times Y' \subseteq \P^n \times \P^m$ is a projective variety, so we need only show that $X \times Y \subseteq X' \times Y'$ is an open subset. Indeed, we can decompose $X' \times Y' - X \times Y = (X' - X) \times Y' \cup X' \times (Y' - Y)$. Both parts of these union are closed as explained in the above paragraph. Hence, $X \times Y \subseteq X' \times Y'$ in the topology induced from $\psi$. In conclusion, $X \times Y$ is a quasiprojective variety.
+
+        \item We want to show that $\psi[X \times Y] \subseteq \psi[\P^n \times \P^m]$ is an irreducible closed subset. We'll first show that if $X, Y$ are closed subsets of $\P^n, \P^m$ then $\psi[X \times Y] \subseteq \psi[\P^n \times \P^m]$ is closed. Indeed, recall that we had the map $\theta: k[z_{ij}] \longrightarrow k[x_0, \dots, x_n, y_0, \dots, y_m]$ via $z_{ij} |.x_i y_j$. Then the image of the Segre embedding $\psi: \P^n \times \P^m \longrightarrow \P^{(n+1)(m+1)-1}$ is given by $Z(\ker(\theta))$. This was proven in \ref{1.2.14}.
+
+        So we need to find equations defining $\psi[X \times Y] \subseteq \P^{(n+1)(m+1)-1}$. As we're assuming $X, Y$ are closed in their respective projective spaces, we can write $X = Z(I)$ and $Y = Z(J)$ for homogeneous ideals $I, J \subseteq k[x_0, \dots, x_n], k[y_0, \dots, y_m]$. From now on, I may use the abbreviations $k[x] := k[x_0, \dots, x_n]$ and $k[y] = k[y_0, \dots, y_m]$. We have the quotient map $\overline{\phantom{a}}: k[x, y] \longrightarrow k[x, y]/(I \cup J)$. We consider then the composition $\overline \theta = \overline{\phantom a} \circ \theta: k[z] \longrightarrow k[x, y]/(I \cup J)$. We claim then that $Z(\ker(\overline \theta)) = X \times Y$.
+
+        Before we show any containment, we need this expression to make sense. That is, we need $\ker(\overline \theta)$ to be homogeneous. This is true, as since $I, J$ are homogeneous we can write $(I \cup J) = (I^h \cup J^h)$, which is a homogeneous ideal in $k[x, y]$. Hence, $\theta$ and $\overline{\phantom{a}}$ are both maps of graded rings which respect the grading (although $\theta$ doubles grading). So $\overline \theta$ preserves grading and its kernel is therefore homogeneous.
+
+        Now, we will show the equality $\psi[X \times Y] = Z(\ker \overline \theta)$.
+        
+        $``\subseteq"$ Let $(a, b) \in X \times Y$ and $f(z) \in \ker(\overline \theta)^h$. Then $f(\psi(a, b)) = \theta(f)(a, b)$. As $f \in \ker \overline \theta$, $\theta(f) \in \ker \overline{\phantom{a}} = (I^h \cup J^h)$. If we had any $g \in I^h$ then $g(a, b) = g(a) = 0$ as $a \in X = Z(I)$. Similarly, if $g \in J^h$ we'd have $g(a, b) = 0$. We can write $\theta(f)$ as a $k[x, y]$ linear combination of terms in $I^h \cup J^h$, so $\theta(f)(a, b) = 0$. Thus, $f(\psi(a, b)) = 0$ so $\psi(a, b) \in Z(\ker \overline \theta)$. In conclusion, $\psi[X \times Y] \subseteq Z(\ker \overline \theta)$.
+
+        $``\supseteq"$ Let $P \in Z(\ker \overline \theta) \subseteq \ker \theta$. Then as $\psi$ is a bijection $\P^n \times \P^m \longrightarrow Z(\ker \theta)$, we can find unique $(a, b) \in \P^n \times \P^m$ such that $P = \psi(a, b)$. We seek to show that $(a, b) \in X \times Y$. Indeed, let's take some $f \in I^h$. If we can show that $f(a) = 0$ then we will have shown $a \in Z(I) = X$.
+        
+        All we know is that $P \in Z(\ker(\overline \theta))$, so we somehow want to pull $f$ back to $k[z]$. We have that some component $b_i$ of $b$ is nonempty. Then the polynomial $f(x_0 y_i, \dots, x_n y_i)$ is still homogeneous. Furthermore, by homogeneity of $f$, this is equal to $y_i^d f(x)$, where $d = \deg f$. Thus, $f(x_0 y_i, \dots, x_n y_i) \in (I \cup J)^h$. Let us write $f = \sum a_K x^K$. Then $f(x_0 y_i, \dots, x_n y_i) = \sum a_{k_0, \dots, k_n} (x_0 y_i)^{k_0} \cdots (x_n y_i)^{k_n}$. Hence, we take $g = \sum a_{k_0, \dots, k_n} z_{0i}^{k_0} \cdots z_{ni}^{k_n}$. This will be homogeneous (of degree $d$) and of course, $\theta(g) = f(x_0 y_i, \dots, x_n y_i) \in (I \cup J) = \ker \overline{\phantom{a}}$. Hence, $g \in (\ker \overline \theta)^h$.
+
+        This therefore tells us that $g(P) = 0$. We have then that $0 = g(\psi(a, b)) = \theta(g)(a, b) = f(a_0 b_i, \dots, a_n b_i) = b_i^d f(a_0, \dots, a_n)$. As we chose $b_i \neq 0$, we must have $f(a) = 0$. Thus, $a \in Z(I) = X$. The same reasoning applies to show that $b \in Z(J) = Y$. Hence, $P \in \psi[X \times Y]$ and we have shown $Z(\ker \overline \theta) \subseteq \psi[X \times Y]$
+                                                                                                   
+        We have shown that $\psi[X \times Y] = Z(\ker \overline \theta)$, which is a closed subset of $\P^{(n + 1)(m + 1) - 1}$. Equivalently, $X \times Y \subseteq \P^n \times \P^m$ is closed in the structure induced by $\psi$. To conclude this, we need to show that if $X, Y$ are irreducible then their product $X \times Y$ is irreducible, which again really means that $\psi[X \times Y]$ is irreducible. As shown above, the equations defining $\psi[X \times Y]$ are given as $\ker(k[z] \longrightarrow k[x, y] \longrightarrow k[x, y]/(\p \cup \q))$, where $\p = I(X)$ and $\q = I(Y)$. As discussed in \ref{1.3.15}.a, this is isomorphic to $k[x]/\p \otimes_k k[y]/\q$. That this is a domain follows from \ref{1.3.15}.a. Alternatively, this can be shown directly using algebraic closure of $k$. This can be found in \cite[Ch. 5 \S 17.5 Cor. 3]{bourbaki-algebra2}. 
+
+        \item Glue the affine open cover???
+
+        Let $\pi_X, \pi_Y$ be the set theoretic projections from $X \times Y$. Let $Z = \psi[X \times Y]$. We could hope that the maps $p_X = \pi_X \circ \psi^{-1}$ and $p_Y = \pi_Y \circ \psi^{-1}$ are projections witnessing $Z$ as a product of the varieties $X, Y$. If we do indeed take this as our projections, then observe the isomorphisms
+        \begin{align*}
+            \mathsf{Set}(W, Z) &\cong \mathsf{Set}(W, X \times Y)\\
+            &\cong \mathsf{Set}(W, X) \times \mathsf{Set}(W, Y)
+        \end{align*}
+        given by $f \mapsto \psi^{-1} \circ f \mapsto (\pi_X \circ \psi^{-1} \circ f, \pi_Y \circ \psi^{-1} \circ f) = (p_X \circ f, p_Y \circ f)$.
+
+        So we need to show two things: that $p_X, p_Y$ are morphisms of varieties and that this isomorphism $f \mapsto (p_X \circ f, p_Y \circ f)$ restricts to $\mathsf{Var}(W, Z) \longrightarrow \mathsf{Var}(W, X) \times \mathsf{Var}(W, Y)$.
+
+        I'll first show that $p_X$ and $p_Y$ are morphisms of varieties. Indeed, I'll explicitly describe a formula for it. Take some $P = [\{c_{ij}\}] \in Z$. Then $\psi^{-1}(P) = (a, b) \in X \times Y$ can be found as follows. Take some $(k, l)$ such that $c_{kl} \neq 0$. Then define $a_{i} = c_{il}$ and $b_j = c_{kj}$. That this actually works was done in \ref{1.2.4}. Hence, $p_X(P) = [c_{0l} : \dots : c_{nl}]$ and $p_Y(P) = [c_{k0} : \dots : c_{k m}]$. This looks like a morphism, but $(k, l)$ depend on $P$ so we are not done. What saves us is that the choice of $(k, l)$ can be taken locally constant in $P$, as if $c_{kl} \neq 0$ then we can take the same choice of $(k, l)$ throughout the open neighborhood $P \in Z - Z(z_{kl})$. Being a morphism is a local property, so $p_X$ and $p_Y$ are indeed morphisms.
+
+        (actually also need to check well definedness, i.e. independence of choice of affine nbhd but this should follow from the relations)
+
+        By the above computation, we already know that $p_X$, $p_Y$ give us a bijection $\mathsf{Set}(W, Z) \cong \mathsf{Set}(W, X) \times \mathsf{Set}(W, Y)$ for any variety $W$. We need this to restrict to $\mathsf{Var}$. That is, we want to say that $(p_x \circ \phi, p_Y \circ \phi)$ are morphisms of varieties if and only if $\phi$ is. We just showed that $p_X$ and $p_Y$ are morphisms of varieties, so one direction is immediate. We are now left to show that if $\phi: W \longrightarrow Z$ is a set map such that its projections $p_X \circ \phi$ and $p_Y \circ \phi$ are morphisms of varieties, then $\phi$ is a morphism of varieties.
+
+        I'm not sure how this works honestly. The product diagram looks like this:
+        $$
+             \begin{tikzcd}
+                 & W \arrow[dr, "\mathsf{Var}"] \arrow[dl, swap, "\mathsf{Var}"] \arrow[d, "\mathsf{Set}"]\\
+                 Y & Z \arrow[l, "\mathsf{Var}"] \arrow[r, "\mathsf{Var}", swap] & X
+             \end{tikzcd}
+        $$
+        so we sorta want a map of sheaves like this:
+        $$
+        \begin{tikzcd}
+             & \mathcal O_W \\
+             \mathcal O_Y \arrow[ur] \arrow[r] & \mathcal O_Z \arrow[u, dashed, "?"] & \mathcal O_X \arrow[ul] \arrow[l]
+        \end{tikzcd}
+        $$
+
+        which somehow makes me want to say there's a tensor product thing happening but I really don't know.
+    \end{enumerate}
 \end{proof}

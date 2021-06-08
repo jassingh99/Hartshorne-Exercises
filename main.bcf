@@ -2200,6 +2200,13 @@
     <bcf:citekey order="16">hartshorne</bcf:citekey>
     <bcf:citekey order="17">hartshorne</bcf:citekey>
     <bcf:citekey order="18">hartshorne</bcf:citekey>
+    <bcf:citekey order="19">bourbaki-algebra2</bcf:citekey>
+    <bcf:citekey order="20">hartshorne</bcf:citekey>
+    <bcf:citekey order="21">hartshorne</bcf:citekey>
+    <bcf:citekey order="22">hartshorne</bcf:citekey>
+    <bcf:citekey order="23">hartshorne</bcf:citekey>
+    <bcf:citekey order="24">hartshorne</bcf:citekey>
+    <bcf:citekey order="25">hartshorne</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="ynt">

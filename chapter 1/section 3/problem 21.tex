@@ -7,7 +7,7 @@ A group variety consists of a variety $Y$ together with a morphism $Y \times Y \
 \begin{enumerate}[label = (\alph*)]
     \item The \emph{additive group} $\mathbf G_{a}$ is given by the variety $\A^1$ and the morphism $\mu: \A^2 \longrightarrow \A^1$ defined by $\mu(a, b) = a + b$. Show it is a group variety.
 
-    \item The \emph{multiplicative group} $\mathbf G_m$ is given by the variety $\A^1 - 9$ and the morphism $\mu(a, b) = ab$. Show it is a group variety.
+    \item The \emph{multiplicative group} $\mathbf G_m$ is given by the variety $\A^1 - 0$ and the morphism $\mu(a, b) = ab$. Show it is a group variety.
 
     \item If $G$ is a group variety, and $X$ is any variety, show that the set $\Hom(X, G)$ has a natural group structure.
 
@@ -17,5 +17,17 @@ A group variety consists of a variety $Y$ together with a morphism $Y \times Y \
 \end{enumerate}
 
 \begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item The map $\A^2 \longrightarrow \A^1$ is induced from the coordinate rings via $k[t] \longrightarrow k[x, y]$ sending $t \mapsto x + y$ and is therefore a morphism of varieties. Furthermore, the inversion map is given by $k[t] \longrightarrow k[t]$ via $t \mapsto -t$, which is also therefore a map of varieties.
 
+        \item This is the restriction of the map $\A^2 \longrightarrow \A^1$ via $k[t] \longrightarrow k[x, y]$ sending $t \mapsto xy$. As for inversion, I'll denote $\phi: \mathbf G_m \longrightarrow \mathbf G_m$ via $\phi(a) = a^{-1}$. Now, let $f \in \mathcal O_{\mathbf{G}_m}(U)$ be given by $f = \frac{g}{h}$. Then $f \circ \phi$ is given by $\frac{f(x^{-1})}{g(x^{-1})}$. Let $d = \deg f$ and $e = \deg g$. Then $\frac{f(x^{-1})}{g(x^{-1})} = \frac{x^{d+e} f(x^{-1})}{x^{d+e} g(x^{-1})}$ is a quotient of polynomials. Furthermore, $\frac{1}{x}$ is well defined on $U$ since $U \subseteq \mathbf G_m = \A^1 - 0$. Hence, $f \circ \phi$ is a regular function so $\phi$ is a morphism of varieties.
+
+        \item This is really a general categorical fact. Indeed, we have the induced map $\Hom(X, G^2) \longrightarrow \Hom(X, G)$. By definition of a product, we have a natural isomorphism $\Hom(X, G^2) \cong \Hom(X, G)^2$. The group axioms can be defined as certain commutative diagrams, and this will give us corresponding diagrams for $\Hom(X, G)$ and its square, thus proving that it is a group.
+
+        \item We have natural isomorphisms $\mathsf{Var}(X, \mathbf G_a) \cong \mathsf{Alg}(k[t], \mathcal O(X)) \cong \mathcal O(X)$. Does this respect the group structure? The first isomorphism certainly does, as it comes from the equivalence of categories $\mathsf{Var}^{op} \longrightarrow \mathsf{Dom}$, which sends the group object $\mathbf G_a$ to the cogroup object $k[t]$.
+        
+        This cogroup structure is given by $k[t] \longrightarrow k[t] \otimes_k k[t]$ via $t \mapsto t \otimes 1 + 1 \otimes t$. This yields the map $\mathsf{Alg}(k[t] \otimes_k k[t], \mathcal O(X)) \longrightarrow \mathsf{Alg}(k[t], \mathcal O(X))$ via $\phi \mapsto (t \mapsto \phi(t \otimes 1 + 1 \otimes t))$. By universal property, any $\phi \in \mathsf{Alg}(k[t] \otimes_k k[t], \mathcal O(X))$ is given uniquely by two maps $f, g: k[t] \longrightarrow \mathcal O(X)$ such that $\phi(a \otimes b) = f(a) g(b)$. Furthermore, any map $k[t] \longrightarrow \mathcal O(X)$ is given uniquely by a choice of $\alpha \in \mathcal O(X)$ such that $t \mapsto \alpha$. Hence, $\phi$ is given by a pair $(\alpha, \beta) \in \mathcal O(X)$. The map $t \mapsto \phi(t \otimes 1 + 1 \otimes t)$ is therefore equal to $\phi(t \otimes 1) + \phi(1 \otimes t) = \alpha + \beta$. Thus, $\phi$, given by $(\alpha, \beta)$, yields the map $k[t] \longrightarrow \mathcal O(X)$ given by $\alpha + \beta$. Finally, the last isomorphism $\mathsf{Alg}(k[t], \mathcal O(X)) \cong \mathcal O(X)$ is an isomorphism of groups.
+
+        \item We have $\mathbf G_m \cong V(xy - 1) \subseteq \A^2$ so it is an affine variety. Thus, we can say that $\mathsf{Var}(X, \mathbf G_m) \cong \mathsf{Alg}(\mathcal O(\mathbf G_m), \mathcal O(X))$. We know that $\mathcal O(\mathbf G_m) = \mathcal O(\A^1 - 0) = k[t]_t$. This is a cogroup given by $k[t]_t \longrightarrow k[t]_t \otimes_k k[t]_t$ via $t \mapsto (t \otimes 1)(1 \otimes t)$. A similar argument to (d) above shows that the isomorphisms $\mathsf{Var}(X, \mathbf G_m) \cong \mathsf{Alg}(k[t]_t, \mathcal O(X)) \cong \mathcal O(X)^*$ are group isomorphisms.
+    \end{enumerate}
 \end{proof}
