@@ -5,11 +5,19 @@ A variety $Y$ is \emph{rational} if it is birationally equivalent to $\P^n$ for 
 \begin{enumerate}[label = (\alph*)]
     \item Any conic in $\P^2$ is a rational curve.
 
-    \item THe cuspidal cubic $y^2 = x^2$ is a rational curve.
+    \item The cuspidal cubic $y^2 = x^3$ is a rational curve.
 
     \item Let $Y$ be the nodal cubic curve $y^2 z = x^2 (x + z)$ in $\P^2$. Show that the projection $\phi$ from the point $P = [0 : 0 : 1]$ to the line $z = 0$ (Exc. \ref{1.3.14}) induces a birational map from $Y$ to $\P^1$. Thus, $Y$ is a rational curve.
 \end{enumerate}
 
 \begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item By exercise \ref{1.3.1}.c, all conics in $\P^2$ are isomorphic to $\P^1$, and are hence birational to it and therefore rational.
 
+        \item Let $Y = V(y^2 - x^3) \subseteq \A^2$. Then consider the map $\A^1 - 0 \longrightarrow Y - 0$ via $t \mapsto (t^2, t^3)$. This is a morphism of varieties with inverse $Y - 0 \longrightarrow \A^1 - 0$ given by $(x, y) \mapsto \frac{y}{x}$. Thus, $Y$ is birational to $\A^1$, which is isomorphic to an open subset of $\P^1$ and is hence rational.
+
+        \item Recall from the proof of \ref{1.3.14} that this particular projection has the formula $\phi([x:y:z]) = [x:y]$. We remark that the equation describing $Y$ here is the homogenization of the equation describing the affine nodal cubic $y^2 = x^3 + x^2$. Thus, we will homogenize the parametrization of the affine nodal cubic. Indeed, consider the map $\psi: \P^1 \longrightarrow Y$ given by $[t : u] \mapsto [u^2 t - t^3 : u^3 - u t^2 : t^3]$. Restrict the domain to the affine open patch $\{u = 1\}$. Restrict further to the open subset on which $t \neq \pm 1$. Then $\phi(\psi([t:1])) = [t - t^3 : 1 - t^2] = [t : 1]$. Thus, the composition $\P^1 \dashrightarrow Y \dashrightarrow \P^1$ is the identity.
+
+        On the other hand, $Y \dashrightarrow \P^1 \dashrightarrow Y$ is given by $[x : y : z] \mapsto [x : y] \mapsto [y^2 x - x^3 : y^3 - y x^2 : x^3]$. Restrict this, of course, to the open set where $[x:y:z] \neq [0:0:1]$. Observe that the second component $y^3 - y x^2$ factors as $y (y^2 - x^2)$, so we claim that $(y^2 - x^2) [x : y : z] = [y^2 x - x^3 : y^3 - y x^2 : x^3]$. For this to work, we have to restrict to the open subset on which $x \neq \pm y$. Anyways, we certainly have $x (y^2 - x^2) = xy^2 - x^3$. Furthermore, as $[x : y : z] \in Y$ we have $x^3 = y^2z - x^2 z = (y^2 - x^2)z$. Hence, $[x : y : z] = [y^2 x - x^3 : y^3 - y x^2 : x^3]$ when this makes sense. Thus, the composition $Y \dashrightarrow \P^1 \dashrightarrow Y$ is the identity. In conclusion, $\phi$ and $\psi$ are birationally inverse, so $Y$ is rational.
+    \end{enumerate}
 \end{proof}

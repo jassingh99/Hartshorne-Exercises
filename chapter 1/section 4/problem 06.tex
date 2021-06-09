@@ -14,5 +14,11 @@ A birational map $\P^2 \longrightarrow \P^2$ is called a \emph{plane Cremona tra
 
 
 \begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item Note that when $a_0, a_1, a_2$ are all nonzero then $[a_1 a_2 : a_0 a_2 : a_0 a_1] = [1/a_0 : 1/a_1 : 1/a_2] (a_0 a_1 a_2)$, and $[a_0 : a_1 : a_2] \mapsto [1/a_0 : 1/a_1 : 1/a_2]$ is indeed its own inverse.
 
+        \item As just discussed in part (a), on the open subset $\P^2 - Z(x_0 x_1 x_2)$ this map is an involution.
+
+        \item The definition in the problem statement holds on $\P^2 - Z(x_1 x_2, x_0 x_2, x_0 x_1)$. Is this open subset maximal? Observe that $P \in Z(x_1 x_2, x_0 x_2, x_0 x_1)$ iff exactly two of its entries are $0$. That is, it consists of $\{[0 : 0 : 1], [0 : 1 : 0], [1 : 0 : 0]\}$. We therefore want to determine if we can extend $\phi$ to any of these three points. I'm not sure how to do this, but I'm pretty sure you can't.
+    \end{enumerate}
 \end{proof}

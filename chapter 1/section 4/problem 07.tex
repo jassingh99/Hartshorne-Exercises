@@ -1,7 +1,23 @@
 \label{1.4.7}
 
-Let $X$ and $Y$ be two varieties. Suppose there are points $P \in X$ and $Q \in Y$ such that the local rigns $\mathcal O_{X, P}$ and $\mathcal O_{Y, Q}$ are isomorphic as $k$-algebras. Then show that there are open sets $P \in U \subseteq X$ and $Q \in V \subseteq Y$ and an isomorphism $U \longrightarrow V$ which sends $P$ to $Q$.
+Let $X$ and $Y$ be two varieties. Suppose there are points $P \in X$ and $Q \in Y$ such that the local rings $\mathcal O_{X, P}$ and $\mathcal O_{Y, Q}$ are isomorphic as $k$-algebras. Then show that there are open sets $P \in U \subseteq X$ and $Q \in V \subseteq Y$ and an isomorphism $U \longrightarrow V$ which sends $P$ to $Q$.
 
 \begin{proof}
+    We will prove this first for $X, Y$ affine varieties. This will be sufficient, as we know that all varieties admit a basis of open affine neighborhoods. Indeed, let's say that $X \subseteq \A^n$ and $Y \subseteq \A^m$. Then we have $\mathcal O_{X, P} = A(X)_{\m_P}$ and $\mathcal O_{Y, Q} = A(Y)_{\m_Q}$. Suppose then that we had an isomorphism of $k$-algebras $\phi: A(Y)_{\m_Q} \longrightarrow A(X)_{\m_P}$. This is uniquely determined by the choice of $y_i \mapsto \frac{f_i}{g_i} \in A(X)_{\m_P}$. Of course, this choice is not free. It must respect the relations $I(Y)$ and send the localized elements in $A(Y)_{\m_Q}$ to units.
 
+    Now, recall that isomorphism $\mathsf{Alg}(A(Y), \mathcal O(U)) \cong \mathsf{Var}(U, Y)$. Then we want our choice of $\phi(y_i) = \frac{f_i}{g_i}$ to represent functions on some open subset $U \subseteq X$. They will, under this isomorphism, yield coordinates of a map $U \longrightarrow Y$. So what open set must this be? Well we certainly need each $g_i \neq 0$ on $U$ for this to work, so take $U = D(\prod g_i)$. This makes sense, as each $g_i$ was necessarily nonzero in $A(X)$, which is a domain. Then each $\frac{f_i}{g_i} \in \mathcal O(U)$ so we do indeed get a map $A(Y) \longrightarrow \mathcal O(U)$, and subsequently a map $\Phi: U \longrightarrow Y$.
+
+    We must first check two essential facts to ensure that we're on the right track. First, that $P \in U$ and second that $\Phi(P) = Q$. For the former, observe that $\prod g_i(P) \neq 0$ as each $g_i \notin \m_P$ and hence, by maximality, their product $\prod g_i \notin \m_P$. Now, we must show that $\Phi(P) = Q$. By the Nullstellensatz, it suffices to show that for every $f \in \m_Q$ we have $f(\Phi(P)) = 0$. Indeed, take such an $f$. We want to show that $f(\phi(y_1)(P), \dots, \phi(y_m)(P)) = 0$. Now, observe that $\phi(f) = f(\phi(y_1), \dots, \phi(y_m))$, as $\phi$ is given by evaluation at the $\phi(y_i)$. We therefore want to show that $0 = f(\Phi(P)) = (\phi(f))(P)$. Since $\phi$ was a ring isomorphism, it takes the $\m_Q A(Y)_{\m_Q} \mapsto \m_P A(X)_{\m_P}$ isomorphically. Thus, $\phi(f) \in \m_P A(X)_{\m_P}$ so we may write $\phi(f) = \frac{g}{h}$ where $g \in \m_P$ and $h \notin \m_P$. Hence, $(\phi(f))(P) = \frac{g(P)}{h(P)} = 0$ as desired. Then $f(\Phi(P)) = 0$ for all $f \in \m_Q$ so $\Phi(P) = Q$.
+
+    So far, we have taken our isomorphism $\phi$ and used it to find an open neighborhood $P \in U \subseteq X$ and an induced map $\Phi: U \longrightarrow Y$ which takes $P \mapsto Q$. We will now apply the same process to $\phi^{-1}$ to find an open neighborhood $Q \in V \subseteq Y$ and a map $\Psi: V \longrightarrow X$ which sends $Q \mapsto P$. Since $\Psi$ arose from $\phi^{-1}$ via the same construction as $\phi \mapsto \Phi$, it better be the case that $\Psi = \Phi^{-1}$.
+
+    Indeed, take some $y \in Y$ on which the composition $\Phi \circ \Psi$ is defined. This works, for instance, on $V \cap \Psi^{-1}[U]$. This contains $Q$ so it is a nonempty open subset. We want to show that $\Phi(\Psi(y)) = y$. As discussed before, it suffices to show that to vanishes on all $f \in \m_y$. Recalling as before that $f(\Phi(P)) = (\phi(f))(P)$ and the analogous fact for $\Psi$ and $\phi^{-1}$, we have the following.
+    \begin{align*}
+        f(\Phi(\Psi(y))) &= (\phi(f))(\Psi(y))\\
+        &= (\phi^{-1}(\phi(f)))(y)\\
+        &= f(y)\\
+        &= 0.
+    \end{align*}
+
+    We can proceed similarly to show that $\Psi \circ \Phi$ restricts to the identity on an open neighborhood of $P$. Hence, $\Phi$ yields an isomorphism $U' \longrightarrow V'$ sending $P \mapsto Q$.
 \end{proof}

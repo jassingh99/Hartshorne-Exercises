@@ -3,5 +3,14 @@
 Same problem for rational maps. If $\phi$ is a rational map of $X$ to $Y$, show there is a largest open set on which $\phi$ is represented by a morphism. We say the rational map is \emph{defined} at the points of that open set.
 
 \begin{proof}
+    This proof will be identical to \ref{1.4.1}, given that we can show that being a morphism of varieties is a local property. Formally, we prove the following:
 
+    \begin{lemma}
+        Let $X, Y$ be varieties and $X = \bigcup U_i$ an open cover. Suppose that $\phi: X \longrightarrow Y$ is a set map such that each restriction $\phi|_{U_i}$ is a morphism of varieties $U_i \longrightarrow Y$. Then $\phi$ is a morphism of varieties.
+    \end{lemma}
+    \begin{proof}
+        Let $V \subseteq Y$ nonempty and let $f: V \longrightarrow k$ be regular. We want to show that $f \circ \phi: \phi^{-1}[V] \longrightarrow k$ is a regular function on $X$. Recall first that continuity is a local property, so $\phi^{-1}[V]$ is open. Indeed, we write it as $\bigcup \phi^{-1}[V] \cap U_i = \bigcup \phi|_{U_i}^{-1}[V]$. Now, let $\phi_i = \phi|_{U_i}$. Then $f \circ \phi_i: \phi_i^{-1}[V] \longrightarrow k$ is regular as $\phi_i$ was assumed to be a morphism of varieties. Thus, $f \circ \phi$ is locally regular and, as discussed in the previous problem, is therefore regular. This is precisely the definition of $\phi$ being a morphism of varieties.
+    \end{proof}
+
+    Now, the exact same argument as in the previous problem will suffice.
 \end{proof}

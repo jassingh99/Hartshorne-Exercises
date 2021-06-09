@@ -1,11 +1,25 @@
 \label{1.4.8}
 
 \begin{enumerate}[label = (\alph*)]
-    \item Show that any variety of positive dimension over $k$ has the same cardinality as $k$. [\emph{Hints:} Do $\A^n$ and $\P^n$ first. Then for any $X$, use induction on the dimension of $n$. Use \cite[I.4.9]{hartshorne} to make $X$ birational to a hypersurface $H \subseteq \P^{n - 1}$. Use Exc. \ref{1.3.7} to show that the projection of $H$ to $\P^n$ from a point not on $H$ is finite-to-one and surjective.]
+    \item Show that any variety of positive dimension over $k$ has the same cardinality as $k$. [\emph{Hints:} Do $\A^n$ and $\P^n$ first. Then for any $X$, use induction on the dimension of $n$. Use \cite[I.4.9]{hartshorne} to make $X$ birational to a hypersurface $H \subseteq \P^{n + 1}$. Use Exc. \ref{1.3.7} to show that the projection of $H$ to $\P^n$ from a point not on $H$ is finite-to-one and surjective.]
 
-    \item Dedeuce that any two \emph{curves} over $k$ are homeomorphic (cf. Exc. \ref{1.3.1}).
+    \item Deduce that any two \emph{curves} over $k$ are homeomorphic (cf. Exc. \ref{1.3.1}).
 \end{enumerate}
 
 \begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item I don't actually use the hint, but it's pretty interesting so I'll include it as a lemma.
+        \begin{lemma}
+            Let $H \subseteq \P^{n + 1}$ a hypersurface, $P \notin H$, and $P \notin \P^n$ a hyperplane. Then the projection $\phi: \P^{n + 1} - P \longrightarrow \P^n$ restricts to a finite to one surjection $H \longrightarrow \P^n$.
+        \end{lemma}
+        \begin{proof}
+            Let $Q \in \P^n$ and consider the preimage $\phi^{-1}[Q] \subseteq \P^{n + 1} - P$. Its closure in $\P^{n + 1}$ is the line $L$ connecting $P$ and $Q$. By exercise \ref{1.3.7}.b, the intersection. Thus, $\phi|_H$ is onto. We want to show that this intersection is, in fact, finite. The intersection $H \cap L$ is a nonempty closed subset of $L$. It is proper as $P \in L$ and $P \notin H$. Thus, its dimension must be strictly smaller than $L$, which is a line and therefore one dimensional. Hence, $\dim H \cap L = 0$. As $L$ is a line in $\P^{n + 1}$, it is isomorphic to $\P^1$. We claim therefore that a zero dimensional nonempty closed subset of $\P^1$ is finite. On each affine open patch, a dimension $0$ closed subset is finite, so it is also true of $\P^1$. Thus, $H \cap L = \phi|_{H}^{-1}[Q]$ is finite and nonempty for all $Q \in \P^n$.
+        \end{proof}
 
+        Now, onto the actual question. As $k$ is infinite, the absorption laws tell us that $|\A^n| = |k|^n = |k|$ for all $n \geq 1$. Furthermore, as $\P^n$ contains a copy of $\A^n$ and is surjected onto by $\A^{n + 1} - 0$, we have $|\P^n| = |k|$ as well. Now, let $X$ be any variety of positive dimension. Then it is a locally closed subset of some $\P^N$, so its cardinality is at most $|k|$.
+        
+        On the other hand, $X$ contains an open affine variety, as these in fact form a basis for the topology on $X$. Thus, as we need only show $|X| \geq |k|$ it suffices to take the case of $X$ affine. Then by N\"other's normalization lemma, there is some finite inclusion $k[t_1, \dots, t_r] \longrightarrow A(X)$. Here $r = \dim X \geq 1$. We then get a corresponding map $X \longrightarrow \A^r$ of affine varieties. It is a surjection as an integral extension of rings induces a surjection on the prime spectra, and integrality furthermore allows this to restrict to maximal ideals. By the Nullstellensatz, this corresponds to a surjection of points $X \longrightarrow \A^r$. Hence, $|X| \geq |\A^r| = |k|$.
+
+        \item It suffices, by part (a) to show that all curves have the cofinite topology. Indeed, let $C$ be a curve and let $F < C$ a nonempty closed subset. If $C$ is a affine then the coordinate ring $A(F)$ will be zero dimensional N\"otherian, hence Artinian. Thus, it will have only finitely many maximal ideals so $F$ will be finite. In general, $C$ has a basis of open affine curves, so it is in particular covere by these. In fact, as $C$ is a N\"otherian space, it is compact, so it has a finite cover by open affine curves. Then the intersection of $F$ with any of these curves will be a proper closed subset of an affine variety and therefore finite. Hence, in general, $F$ is finite. Furthermore, any bijection between cofinite spaces is a homeomorphism, so all curves are homeomorphic.
+    \end{enumerate}
 \end{proof}

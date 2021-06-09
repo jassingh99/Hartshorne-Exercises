@@ -7,5 +7,17 @@
 \end{enumerate}
 
 \begin{proof}
+    \begin{enumerate}[label = (\alph*)]
+        \item As written, this function is defined on the open subset $\P^2 - Z(x_0)$. Suppose that there was an extension $F$ of this function which was regular at some $P$. Then in some neighborhood $V$ of $P$, $F$ can be written as a quotient $F = \frac{f}{g}$ of homogeneous polynomials of the same degree. Thus, $\frac{f}{g}$ and $\frac{x_1}{x_0}$ must be equal as functions on the nonempty open set $V \cap (\P^2 - Z(x_0))$. Thus, they must be equal as rational polynomials, so $\frac{f}{g} = \frac{x_1}{x_0}$. In particular, $x_0 | g$. We must have $g(P) \neq 0$, so $P \notin Z(x_0)$. Thus, $\P^2 - Z(x_0)$ is the largest open set on which $f$ is defined.
 
+        We can, of course, view $\P^2 - Z(x_0)$ as $\A^2$ via the isomorphism $[x_1, x_2] \mapsto [1: x_1 : x_2]$. Pulling $f$ back to $\A^2$, we get the regular function $\A^2 \longrightarrow k$ defined by $(x_1, x_2) \mapsto x_1$, which is induced by $k[t] \longrightarrow k[x_1, x_2]$ via $t \mapsto x_1$.
+
+        \item We embed $\A^1 \longrightarrow \P^1$ via $t \mapsto [1 : t]$. The composition $\P^2 \dashrightarrow \A^1 \rightarrow \P^1$ is given by $[x_0 : x_1 : x_2] \mapsto [1 : x_1/x_0]$, which is defined on $\P^2 - Z(x_0)$. This has an extension $[x_0 : x_1 : x_2] \mapsto [x_0 : x_1]$, which is defined on $\P^2 - \{[0 : 0 : 1]\}$. I'd like to remark, before continuing, that on $x_0 = 0$ this yields $[0 : 1]$. On the other hand, this ``equals," via the previous formula, $[1 : 1/0] = [1 : \infty]$. All this is to say that this extension is possible because the inclusion $\A^1 \subseteq \P^1$ includes a point at infinity which allows this division by zero to become sensible.
+
+        Anyways, the issue now is to determine if this is the largest open set on which $\phi$ is defined. I took the idea of looking at the closure of fibers from \href{https://math.stackexchange.com/questions/1932969/morphisms-from-mathbbp2-to-mathbbp1}{here}. Suppose we had some morphism $\Phi: \P^2 \longrightarrow \P^1$ such that $\Phi|_{\P^2 - \{[0:0:1]\}} = \phi$. Then if $\Phi([0:0:1]) = P$ then the fiber $\Phi^{-1}[P]$ will be closed by continuity. Furthermore, $[0:0:1]$ can only be in one fiber, so the question is which one? We will show that it wants to be in all of them.
+
+        Indeed, take some $[a_0 : a_1] \in \P^1$. Then the preimage $\phi^{-1}[[a_0 : a_1]] \subseteq \P^2 - \{[0:0:1]\}$ is closed in the subspace topology. Observe additionally that $\phi^{-1}[[a:b]] \subseteq Z(a_1 x_0 - a_0 x_1)$. In fact, $Z(a_1 x_0 - a_0 x_1) = \phi^{-1}[[a_0 : a_1]] \cup \{[0:0:1]\}$. Thus, $[0:0:1] \in \overline{\phi^{-1}[[a_0 : a_1]]}$ for any $[a_0 : a_1] \in \P^1$. Furthermore, $\Phi^{-1}[[a_0 : a_1]] \supseteq \overline{\phi^{-1}[[a_0 : a_1]]}$. This is actually an equality, as $\phi^{-1}[[a_0:a_1]]$ is not closed by irreducibiltiy of $Z(a_1 x_0 - a_0 x_1)$. The point is, though, that $[0 : 0 : 1]$ is therefore an element of every single $\Phi^{-1}[P]$, $P \in \P^1$. This is what I mean by saying $[0:0:1]$ wants to be in all of the fibers, a contradiction.
+
+        In conclusion, the largest open subset on which $\P^2 \dashrightarrow \P^1$ via $[x_0 : x_1 : x_2] \mapsto [x_0 : x_1]$ is defined is $\P^2 - \{[0:0:1]\}$.
+    \end{enumerate}
 \end{proof}

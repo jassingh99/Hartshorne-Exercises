@@ -1,7 +1,9 @@
 \label{1.4.1}
 
-If $f, g$ are regular functions on open subsets $U, V$ of a variety $X$, and if $f = g$ on $U \cap V$, show that the function which is $f$ on $U$ and $g$ on $V$ is a regular function on $U \cup V$. Conclude that if $f$ is a \emph{rational} funciton on $X$, then there is a largest open subset $U$ of $X$ on which $f$ is represented by a regular function. We say that $f$ is \emph{defined} at the poonts of $U$.
+If $f, g$ are regular functions on open subsets $U, V$ of a variety $X$, and if $f = g$ on $U \cap V$, show that the function which is $f$ on $U$ and $g$ on $V$ is a regular function on $U \cup V$. Conclude that if $f$ is a \emph{rational} function on $X$, then there is a largest open subset $U$ of $X$ on which $f$ is represented by a regular function. We say that $f$ is \emph{defined} at the poonts of $U$.
 
 \begin{proof}
+    The essence of the proof is that being a regular function is a local property. Let $h: U \cup V \longrightarrow k$ be the unique extension of $f, g$. Let $x \in U \cup V$. We want to show that $h$ is regular at $x$. Suppose that $x \in U$. Then as $f$ is regular at $x$, there is some $x \in U' \subseteq U$ such that $f$ is a quotient of polynomials on $U'$. Then as $h|_{U'} = f|_{U'}$, $h$ is regular at $x$. The same logic applies to the case $x \in V$. Thus, $h$ is regular.
 
+    Now let $f \in k(X)$ a rational function. Then $f$ is an equivalence class of regular functions on nonempty open subsets of $X$. Index the elements of this equivalence class as $f = \{(U_i, f_i) : i \in I\}$. Now let $U = \bigcup U_i$. There is a unique $g: U \longrightarrow k$ such that $g|_{U_i} = f_i$. By the same logic as the previous paragraph, i.e. locality of regularity, $g$ is regular. By definition, $(U, g) \in f$ is the largest representative of $f$.
 \end{proof}
